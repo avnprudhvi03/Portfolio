@@ -1,0 +1,362 @@
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Larger Than 600px & Smaller Than 768px Screens  - TABS */
+
+/* HEADER SECTION CODE */
+
+@media (min-width:600px) and (max-width:767px) {
+    .header{
+        gap: 4rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 2rem; 
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: none;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: flex;
+        gap: 2.5rem;
+    }
+}
+    
+/* HOME SECTION CODE */
+@media (min-width:600px) and (max-width:767px){
+    .hero-img img{
+        margin-left: 7rem;
+    }
+    .hero-info-text h3{
+      margin-left: -6rem;
+      margin-top: 30rem;
+      font-size: 2rem;
+    }
+    .hero-info-text h1{
+        margin-left: -7rem;
+        margin-top: 1rem;
+        font-size: 4rem;
+    }
+    .color-text{
+        margin-left: -5rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .cv-btn{
+        margin-left: -4.5rem;
+    }
+    .socials{
+        margin-left: -7rem;
+        gap: 3rem;
+    }
+}
+    
+/* SERVICES SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+    
+    .services{
+        padding-top: 5rem;
+    }
+    .service-list-container{
+        justify-content: space-between;
+    }
+ 
+    .list-item-text h2{
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+    
+/* ABOUT SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+            
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR   */
+    
+    .about-container{
+        height: 1400px;
+        margin-left: 1.5rem; 
+        /* width: 550px; */
+        /* border: 1px solid grey; */
+        /* background-color: yellow;  */
+    }
+    .about-nav-links{
+        height: 280px; 
+        /* border: none; */
+    }
+    #abt-tab{
+        margin-left: 0;    
+    }
+    .about-nav-buttons button {
+        width: 100%;
+        height: 70px;
+        border: none;
+        font-size: 25px;
+        border-bottom: 2px solid grey;
+    }
+}
+    
+/* ABOUT-TAB */
+@media (min-width:600px) and (max-width:767px){
+    .nav-buttons{
+        height: 70rem;
+    
+    }
+    .nav-content-tab{
+        display: block;
+    }
+    .about-tab-img img{
+        width: 300px;
+        height: 300px;
+        margin-left: 6rem;
+        margin-top: 5rem;
+    
+    }
+    .content-text-tab h1{
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+    .content-text-tab p{
+        margin-left: 8%;
+        margin-top: 1rem ;
+        font-size: 15px; 
+        line-height: 1.5;
+    }
+   
+    .full-name h2{
+        font-size: 20px;
+    }
+    
+    .my-details{
+        display: block;
+        margin-left: 9rem;    
+    }
+    .phone{
+        margin-top:20px;
+        margin-left: 1.5rem;
+    }
+    .social-media{
+        margin-left: 2rem;
+    }
+}
+    
+/* SKILLSET-TAB */
+    
+@media (min-width:600px) and (max-width:767px){
+    
+    .skill-tab{
+        display: block;  
+    }
+    .skill-content{
+        width: 400px;
+        margin-left: 10px;
+        margin-top: 1rem;
+    }
+    #skill-content{
+    margin-top: 30px;
+    }
+    .skill-quote{
+        margin-top: 30px;
+        font-size: 20px;
+        width: 520px;
+    }
+    .skill-quote-span{
+        margin-left: 15%;
+    }
+    .skill-tab-img img{
+        height: 400px;
+        margin-top: 10rem;
+        margin-left: 40px;
+    }     
+}
+    
+/* EDUCATION-TAB */
+
+@media (min-width:600px) and (max-width:767px){
+      
+    .edu-quote{
+        margin-left: 10px;
+        margin-top: 1rem;
+    }
+    .edu-quote-span{
+        margin-left: 40px;
+    }
+    .edu-container {
+        margin-left: 5rem;
+    }  
+    .card-container {
+        display: block;  
+    }
+    .ag-courses_item {
+        height: 300px;
+    } 
+    .study{
+        margin-top: -20px;
+        margin-left: 60px;
+    }
+    .college{
+        margin-top: -5px;
+        margin-left: 40px;
+    }
+    .course{
+        margin-top: -5px;
+        margin-left: 100px;
+    }
+    .branch{
+        margin-top: -5px;
+        margin-left: 30px;
+    }
+    .duration {
+        margin-top: -5px;
+        margin-left: 90px;
+    }
+    .cgpa{
+        margin-top: -5px;
+        margin-left: 70px;
+    }
+    .nuz{
+        margin-top: 8px;
+        margin-left: 70px;
+    }
+    #inter{
+        margin-left: 60px;
+    }
+    #puc{
+        margin-left: 40px;
+    }
+    #mpc{
+        margin-left: 110px;
+    }
+    #ssc{
+        margin-left: 110px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 20px;   
+    }  
+}
+/* CERTFICATIONS-TAB */
+    
+/* @media (min-width:600px) and (max-width:767px){
+    
+    .certifications{
+        display: flex;
+    }
+    .cert-info{
+        padding-top: 5rem;
+    }
+    .cert-info h2{
+        margin-left: 10%;
+        background-color: red;
+    }
+    .cert-info{
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+    .cert-img{
+        display: none;
+    }
+} */
+    
+/* WORK WITH ME */
+@media (min-width:600px) and (max-width:767px){
+    .work-together{
+        margin-left: 0;
+        height: 100px;
+    }
+    .hire-me i{
+        font-size: 50px;
+        margin-top: 25px;
+        margin-left: 2%;
+    }
+    .hire-me h2{
+        margin-left: 10px;
+        margin-top: 35px;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    .hire-me button{
+        margin-left: 5rem;
+    }  
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+    .contact{
+        height: 1050px;
+    }
+    .contact h2{
+        font-size: 40px;
+        margin-left: 10%;
+    }
+    .get-connect{
+        display: block;   
+    }
+    .contact-form{
+        margin-left: 5%;
+    }
+    .mobile-view{
+        /* width: 570px; */
+        width: 100%;
+        height: 1px;
+        margin-top: 2rem;
+        background-color: grey;
+        margin-left: -10px ;
+        /* margin: 6px 0; */
+        /* transition: 0.4s; */
+    }
+    .shk-hnd{
+        font-size: 90px;
+        margin-left: 40%;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 10%;
+        width: 320px;
+        margin-top: 10%;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+    .footer{
+        width: 590px;
+        display: flex;
+        height: 50px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 14px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 10px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 35px;
+    }
+    
+}
+    
+
+
