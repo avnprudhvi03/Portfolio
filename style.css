@@ -1,0 +1,5728 @@
+*{
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    padding: 0px;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* HEADER SECTION CODE*/ 
+/* 1rem = 16px */
+body{
+    background-color: black;
+    color: white;
+}
+.header{
+    position: fixed;
+    top: 0px; 
+    height: 70px;
+    width: 100%;
+    display: flex;
+    gap: 8rem;
+    background-color: black;
+    padding: 5px 10px;
+    z-index: 1;
+    align-items: center;
+    /* top: 15px;  */
+    /* left: 22%; */
+    /* justify-content: center; */
+    /* border-radius: 3rem; */
+    /* color: black; --> linkedin logo changes */ 
+    transition: background-color 0.3s ease;   
+}
+.header.scrolled {
+    background-color: #333; /* Background color when scrolled */
+  }
+
+
+/* LOGO */
+
+.logo{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-left: 8rem;
+    align-items: center;
+    text-wrap: nowrap;   
+}
+.logo:hover {
+    transition: 0.4s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* MENU-ICON */
+.menu-icon {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.bar1, .bar2, .bar3 {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}       
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: translate(0, -5px) rotate(45deg);
+}
+
+/* SIDEBAR */
+
+/* UNCOMMENT FOR RESPONSIVE FOR MOBILES */
+
+/* .sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: #333;
+    transition: 0.3s;
+    padding-top: 60px;
+} */
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    /* gap: 50%; */
+    /* align-items: center; */
+}
+.nav-links a{
+    position: relative;
+    color: white;
+    font-weight: 800;
+}
+.nav-links a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.4s ease-in-out;
+    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+}
+.nav-links a:hover::before{
+   width: 100%;
+    cursor: pointer;
+}
+
+/* #ln{
+    margin-right:30px ;
+    padding: 3px;
+    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+    
+}
+#ln:hover{
+    transform: scale(1.02);
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    
+}  */
+
+/* HOME SECTION CODE */
+
+.home{ 
+    width: 100%; 
+    position: relative;
+    padding-top: 10rem;
+    /* margin-top: 5rem; */  
+    /* min-height: 100vh; */
+    /* padding: 100px; */
+    /* background-color: white; */
+}
+.home-container{
+    display: flex;
+    
+}
+.hero-img{
+    /* background-color: red; */
+    width: 50%;
+}
+.hero-img img{   
+    border-radius: 50%;
+    margin-left: 10rem;  
+    height: 400px;
+    width: 400px;
+    
+}
+.hero-info{
+    /* background-color: green; */
+    width: 50%;   
+}
+.hero-info-text h3{
+    margin-left: 10rem;
+    margin-top: 4.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.7;
+}
+.hero-info-text h1{
+    margin-left: 8rem;
+    font-size: 4rem;
+    font-weight: 600;
+}
+.color-text{
+    margin-left: 11rem;
+    padding-top: 1rem;
+}
+.color-text{
+    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.3rem;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cv-btn{
+    margin-left: 11.5rem;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    text-wrap: nowrap;
+    transition: 0.4s ease-in-out;
+}
+.cv-btn:hover{
+    background-color: white;
+    color:black;
+}
+.socials{
+    margin-left: 10rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+.socials i{
+    font-size: 2.5rem;
+    cursor: pointer; 
+}
+.socials i:hover{
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+#lnicon{
+    background-color: black;
+    color: white;
+}
+#mailicon{
+    background-color: black;
+    color: white;
+}
+#github{
+    background-color: black;
+    color: white;
+}
+
+/* SERVICE SECTION CODE */
+
+.services{
+    width: 100%; 
+    position: relative;
+    padding-top: 8rem;
+}
+.service-container{
+    border-top: 0.1px solid grey;
+    border-bottom: 0.1px solid gray; 
+    width: 100%;
+    height: 150px;
+    position: relative;
+    /* background-color: red; */
+}
+.service-list-container{
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 10px; */
+}
+.service-list-items{
+    position: relative;
+    border-left:0.1px solid grey  ;
+    border-right: 0.1px solid grey;
+    /* width: 150px;
+    height: 150px; */
+}
+.service-list-items img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    transition:  0.3s ease-in-out;
+    padding: 30px;  
+}
+.list-item-text h2{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 20px;
+    opacity: 0;
+    transition:  0.3s ease-in-out;
+    /* z-index: 1; */
+}
+.service-list-items:hover img{
+    opacity: 0;
+}
+.service-list-items:hover .list-item-text h2{
+    opacity: 1;
+    cursor: pointer;
+}
+#wdv-text{
+    padding-left:40px;
+}
+#sd-text{
+    padding-left:5px;
+}
+#wds-text{
+    padding-left:8px;
+}
+
+/* ABOUT SECTION CODE */
+
+.about{
+    width: 100%; 
+    position: relative;
+    padding-top: 5rem;
+}
+
+/* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+
+.about-container{
+    width: 92%;
+    margin-left: 50px; 
+    height: 550px;
+    /* background-color: yellow; */
+}
+.about-nav-links{
+    height: 72px;
+    width: 100%;
+    border: 1px solid grey;
+}
+.about-nav-buttons{
+    background-color: rgba(18,18,18,1);
+}
+#abt-tab{
+    margin-left: 0.7px;    
+}
+.about-nav-buttons button {
+    background-color: black;
+    color: white;
+    width: 24.7%;
+    height: 70px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.about-nav-buttons button:hover {
+    background:grey;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+}
+.active {
+    display: block;
+}
+
+/* ABOUT-TAB */
+.nav-buttons{
+    border: 1px solid grey;
+    height: 500px;
+}
+.nav-content-tab{
+    display: flex;
+}
+.about-tab-img img{
+    width: 350px;
+    height: 400px;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.content-text-tab h1{
+    color: red; 
+    margin-left: 10%;
+    margin-top: 10px;
+}
+.content-text-tab p{
+    width: 90%;
+    color: white;
+    margin-left: 10%;
+    text-align: justify;
+    font-size: 16px; 
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;     
+}
+.full-name{
+    margin-left: 10%;
+}
+.full-name h3{
+    color: white;
+}
+.full-name h2{
+    font-family: cursive;
+    color: white;
+}
+.my-details{
+    display: flex;
+    margin-left: 10%;
+    gap: 70px;
+}
+.mail{
+    display: flex;
+    gap: 5px;
+}
+#mail{
+    color: white;
+    text-decoration: none;
+}
+.loc{
+    display: flex;
+    gap: 5px;
+}
+#loc{
+    color: white;
+}
+#loc-icon{
+    background: black;
+    color: red;
+    font-size: 23px;
+}
+.phone{
+    display: flex;
+    gap: 5px;
+}
+#phn{
+    color: white;
+    text-decoration: none;
+}
+.wtsp{
+    width: 19px;
+    height: 19px;
+    background-image: url(whatsapp.svg);
+    background-size: cover;
+    background-position: center;
+}
+#phn-icon:hover{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
+}
+.social-media{
+    display: flex;
+    gap: 30px;
+}
+.social-media img{
+    width: 30px;
+}
+#git{
+    font-size: 30px;
+    background: black;
+    color: white;
+}
+
+.social-media:hover i{
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+.social-media:hover img{
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+
+
+/* SKILLSET-TAB */
+
+.skill-tab{
+    display: flex;
+}
+
+.skill-content{
+    width: 500px;
+    margin-left: 20%;
+    margin-top: 15px;
+}
+.skill-quote{
+    background: linear-gradient(to left,rgb(0,157,255),rgb(255,0,255));
+    background-clip: text;
+    color: transparent;
+    font-size: 19px;
+    font-weight: bold;
+}
+.skill-quote-span{
+    margin-left: 15%;
+}
+.skill-content h1{
+    margin-top: 25px;
+}
+
+.technologies{
+    display: flex;
+    gap: 20px;
+}
+.tech-icon-container{
+    position: relative;
+    display: inline-block;
+}
+.text-about-icon{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 12px;
+}
+.tech-icon-container:hover .text-about-icon{
+    opacity: 1;
+}
+.tech-icon{
+    width: 40px;
+}
+#picsart{
+    width: 30px;
+    margin-top: 4px;
+}
+.skill-tab-img img{
+    width: 400px;
+    height: 450px;
+    margin-top: 8px;
+    margin-left: 40%;  
+}
+
+/* EDUCATION-TAB */
+
+.edu-quote{
+    margin-left: 11%;
+    background: linear-gradient(to left,rgb(0,157,255),rgb(255,0,255));
+    background-clip: text;
+    color: transparent;
+    font-size: 25px;
+    font-weight: bold;
+}
+.edu-container {
+    width: 900px;
+    margin-top: 15px;
+    margin-left: 10%;
+}  
+.card-container {
+    display: flex;
+}
+.ag-courses_item {
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 28px;
+    width: 300px;
+    height: 400px;
+}
+.ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: rgba(18,18,18,1);
+    /* background-color: white; */
+    z-index: 0;
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+}
+.ag-courses-item_link:hover .study {
+    text-decoration: none;
+    color:black;
+}
+.ag-courses-item_link:hover .college {
+    text-decoration: none;
+    color:black;
+}
+.ag-courses-item_link:hover .course {
+    text-decoration: none;
+    color:black;
+}
+.ag-courses-item_link:hover .branch {
+    text-decoration: none;
+    color:black;
+}
+.ag-courses-item_link:hover .duration {
+    text-decoration: none;
+    color:black;
+}
+.ag-courses-item_link:hover .nuz {
+    text-decoration: none;
+    color:black;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+}
+.ag-courses-item_bg {
+    height: 120px;
+    width: 120px;
+    background-color: whitesmoke;
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* .sno{
+    color: red;
+    margin-top: -30px;
+    padding-left: 80%;
+    z-index: 2;
+    position: absolute;
+} */
+
+.study{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+.college{
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+.course{
+    margin-top: 5px;
+    margin-left: 70px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+.branch{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+.duration {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 65px;
+    font-size: 13px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+.cgpa{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: 0.4s ease-in-out;
+    background-color: #121212;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 13px;
+    z-index: 2;
+    position: relative;
+}
+.nuz{
+    margin-top: 30px;
+    margin-left: 40px;
+    font-weight: 660;
+    font-size: 11px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+#inter{
+    margin-left: 40px;
+}
+#puc{
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#mpc{
+    margin-left: 90px;
+    font-size: 18px;
+}
+#ssc{
+    margin-left: 90px;
+} 
+.zphs{
+    margin-left: 40px;
+}
+#ss{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* CERTIFICATIONS-TAB */
+.cert-container{
+    margin-top: 2%;
+    margin-left: 7%;
+}
+.cert-info li{
+    list-style-type: disc;
+}
+.cert-container h2{
+    color: red;
+}
+
+
+/* WORK WITH ME */
+
+.work-with-me{
+    width: 100%; 
+    position: relative;
+    padding-top: 5rem;
+    /* background-color: red; */
+}
+.work-together{
+    width: 100%;
+    height: 150px;
+    border-top: 0.5px solid grey;
+    border-bottom: 0.5px solid grey; 
+}
+.hire-me{
+    display: flex;
+}
+.hire-me i{
+    font-size: 80px;
+    margin-top: 30px;
+    margin-left: 5%;
+}
+.hire-me h2{
+    margin-left: 10px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 35px;
+}
+.hire-me button{
+    width: 120px;
+    height: 50px;
+    margin-top: 4%;
+    margin-left: 40%;
+    background-color: rgba(128, 128, 128, 0.202);
+}
+.hire-me button:hover{
+    border: 0.5px solid white;
+    background-color: black;
+}
+.hire-me button a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+/* CONTACT SECTION CODE */
+
+.contact{
+    width: 100%; 
+    position: relative;
+    padding-top: 3rem;
+    height: 500px;
+    border-bottom: 0.5px solid grey;
+}
+.contact h2{
+    font-size: 50px;
+    font-weight: 900;
+    margin-left: 8%;
+}
+.get-connect{
+    display: flex;
+    gap: 4rem;   
+}
+.contact-form{
+    margin-left: 20%;
+}
+.input-field{
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-bottom: 0.5px solid grey;
+}
+.input-field:focus{
+    border: none;
+    outline: none;
+}
+.input-field:focus:hover{
+    border-bottom: 0.5px solid white;
+}
+textarea{
+    background-color: black;
+    color: white;
+    border-bottom: 0.5px solid grey;
+}
+textarea:focus:hover{
+    border-bottom: 0.5px solid white;
+    
+}
+textarea:focus{
+    border: none;
+    outline: none;
+}
+.connect-btn{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: 0.4s ease-in-out;
+    background-color: black;
+    color: white;
+}
+.connect-btn:hover{
+    background-color: white ;
+    color: black;
+}
+.shk-hnd{
+    color: white;
+    font-size: 50px;
+    margin-left: 18%;
+    margin-top: 10%;
+}
+.contact-footer{
+    margin-left: 11%;
+}
+.contact-footer-items{
+    display: flex;
+    gap: 20px;
+    border-bottom: 0.5px solid grey;
+    height: 70px;
+}
+.contact-footer-items img{
+    width: 50px;
+    height: 50px;
+}
+.contact-footer-info{
+    margin-top: 15px;
+}
+
+/* FOOTER SECTION CODE */
+
+.footer{
+    height: 90px;
+    /* background-color:red; */
+}
+.footer-container{
+    display: flex;
+    height: 80px;
+    gap: 25rem;
+    /* background-color: yellow;    */
+}
+.copyright{
+    margin-left: 8%;
+    margin-top: 3%;
+}
+.back-to-top{
+    margin-top: 1rem;
+}
+.back-to-top i{
+    font-size: 40px;
+    color: grey;
+}
+.back-to-top i:hover{
+    color: white;
+}
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Larger Than 370px & Smaller Than 420px Screens - Small & Medium MOBILES */
+
+/* HEADER SECTION CODE*/
+
+
+@media (min-width:320px) and (max-width:369px)  {
+    /* LOGO */
+    .logo{
+    margin-left: 2rem; 
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: block;
+        right: 40px;
+    }
+    /* SIDEBAR */
+    .sidebar.active {
+        left: 0;
+    }
+    .sidebar {
+        height: 100vh;
+        width: 180px;
+        position: fixed;
+        top: 0;
+        left: -180px;
+        background: #333;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: block;
+    }
+    .nav-links a{
+        padding: 25px;
+        /* padding-top: 30px; */
+        /* padding-bottom: 30px; */
+        padding-left: 40px;
+        /* padding-right: 30px; */
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: 0.3s;  
+    }
+    .nav-links a:hover {
+        background: #575757;
+        /* padding: 15px; */
+        /* padding-left: 30px; */
+    }
+    .nav-links a::before{
+        display: none;
+    }
+    .nav-links a:hover::before{
+        display: none;
+    } 
+}
+    
+/* HOME SECTION CODE*/
+
+ @media (min-width:320px) and (max-width:369px){
+    .home{
+        padding-top: 8rem;
+    }
+    .hero-img img{
+        margin-left: 1rem;
+        margin-top: -1rem;
+        height: 300px;
+        width: 300px;
+    }
+    .hero-info-text h3{
+      margin-left: -4.2rem;
+      margin-top: 22rem;
+      font-size: 1.5rem;
+      
+    }
+    .hero-info-text h1{
+        margin-left: -5.8rem;
+        margin-top: 0.5rem;
+        font-size: 3.5rem;  
+    }
+    .color-text{
+        margin-left: -4rem;
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        overflow: visible !important;
+    }
+
+    .cv-btn{
+        margin-left: -3.8rem;
+        padding: 0.5rem 1rem;
+    }
+    .socials{
+        margin-left: -6rem;
+        gap: 2rem;
+    }
+}
+    
+/* SERVICE SECTION CODE */
+    
+@media (min-width:320px) and (max-width:369px){
+    
+    .services{
+        padding-top: 5rem;  
+    }
+    .service-container{
+        height: 550px;
+        border: none;
+    }
+    .service-list-container{
+        display: grid;
+        height: 180px;
+    }
+    .service-list-items img{
+        width: 180px;
+        height: 180px; 
+        border: 0.5px solid grey;
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+/* ABOUT SECTION CODE */
+    
+@media (min-width:320px) and (max-width:369px){
+        
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR   */
+    
+    .about-container{
+        width: 300px;
+        height: 1180px;
+        margin-left: 30px; 
+        border: 1px solid grey;
+        /* background-color: yellow;  */
+    }
+    .about-nav-links{
+        height: 200px;
+        border: none;  
+    }
+    #abt-tab{
+        margin-left: 0;    
+    }
+    .about-nav-buttons button {
+        width: 100%;
+        height: 70px;
+        border: none;
+        font-size: 25px;
+        border-bottom: 2px solid grey;
+    }
+}
+    
+/* ABOUT-TAB */
+@media (min-width:320px) and (max-width:369px){
+    .nav-buttons{
+        border: none;
+    }
+    .nav-content-tab{
+        display: block;
+    }
+    .about-tab-img img{
+        width: 250px;
+        height: 250px;
+        margin-left: 10px;
+        margin-top: 6rem;
+    }
+    .content-text-tab h1{
+        margin-left: 5px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .content-text-tab p{
+        margin-left: 5px; 
+        font-size: 13px; 
+        line-height: 1;  
+        text-align: left;  
+    }
+    .full-name{
+        margin-left: 5px;
+    }
+    .full-name h2{
+        font-size: 13px;
+    }
+    .my-details{
+        display: block;
+        margin-left: 15px;    
+    }
+    .phone{
+        margin-top:20px;
+        margin-left: 20px;
+    }
+    .social-media{
+        margin-left: 30px;
+    }
+}
+    
+/* SKILLSET-TAB */
+    
+@media (min-width:320px) and (max-width:369px){
+    
+    .skill-tab{
+        display: block;
+        
+    }
+    .skill-content{
+        width: 260px;
+        margin-left: -5px;
+        /* margin-top: 6rem; */
+        /* background-color: red; */
+    }
+    #skill-content{
+    margin-top: 10px;
+    }
+    .skill-quote{
+        width: 252px;
+        margin-top: 6rem;
+        font-size: 15px;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-tab-img img{
+        width: 250px;
+        height: 250px;
+        margin-top: 4rem;
+        margin-left: 5px;
+    }   
+}
+    
+/* EDUCATION-TAB */
+    
+@media (min-width:320px) and (max-width:369px){
+      
+    .edu-quote{
+        margin-left: 10px;
+        margin-top: 4rem;
+        font-size: 15px;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .edu-quote-span{
+        margin-left: 0px;
+    }
+    .edu-container{
+        margin-left: -10px; 
+    }
+    .card-container {
+        display: block; 
+    }
+    .ag-courses_item {
+        width: 250px;
+        height: 250px;
+    }
+    .study{
+        margin-top: -20px;
+        margin-left: 55px;
+        font-size: 15px;
+    }
+    .college{
+        margin-top: -12px;
+        margin-left: 30px;
+        font-size: 10px;
+    }
+    .course{
+        margin-top: -12px;
+        margin-left: 75px;
+        font-size: 15px;
+    }
+    .branch{
+        margin-top: -12px;
+        margin-left: 40px;
+        font-size: 11px;
+    }
+    .cse{
+        margin-left: 0px;
+    }
+    .duration {
+        margin-top: -12px;
+        margin-left: 75px;
+    }
+    #ssc-duration{
+        margin-top: -50px;
+    }
+    .cgpa{
+        /* margin-top: -40px !important; */
+        margin-left: 60px;
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+    #sgpa{
+        margin-top: -30px;
+    }
+    #cgpa{
+        margin-top: -40px !important;
+    }
+    .nuz{
+        margin-top: 8px;
+        margin-left: 45px;
+    }
+    #inter{
+        margin-left: 50px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 15px;
+    }
+    #mpc{
+        margin-left: 80px;
+        font-size: 18px;
+    }
+    #ssc{
+        margin-left: 90px;
+        font-size: 18px;
+    } 
+    .zphs{
+        margin-left: 0px;
+    }
+    #ss{
+        margin-left: 50px;
+        font-size: 15px;
+    }
+    #schl-name{
+        margin-left: 25px;
+    }
+    
+}
+/* CERTIFICATIONS-TAB */
+@media (min-width:320px) and (max-width:369px){
+    .cert-container h1{
+        margin-top: 5rem;
+        color: red;
+    }
+}
+
+    
+
+/* WORK WITH ME */
+    @media (min-width:320px) and (max-width:369px){
+    .work-together{
+        height: 100px; 
+    }
+    .hire-me i{
+        font-size: 50px;
+        margin-top: 20px;
+        margin-left: 2%;
+    }
+    .hire-me h2{
+        margin-left: 5px;
+        margin-top: 35px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .hire-me button{
+        width: 60px;
+        height: 30px;
+        margin-top: 10%;
+        margin-left: 3%;   
+    }
+    .hire-me button a{
+        font-size: 10px;
+    }
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:320px) and (max-width:369px){
+    .contact{
+        height: 1050px;
+        padding-top: 5rem;
+    }
+    .contact h2{
+        font-size: 40px;
+        margin-left: 10%;
+    }
+    .get-connect{
+        display: block;  
+    }
+    .contact-form{
+        margin-left: 5%;
+        height: 370px;
+        width: 100%;
+    }
+    .input-field{
+        width: 260px;
+    }
+    .mobile-view{
+        width: 300px;
+        height: 1px;
+        margin-top: 1rem;
+        background-color: grey;
+        margin-left: -10px ;
+    }
+    .shk-hnd{
+        font-size: 70px;
+        margin-left: 40%;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 13%;
+        width: 260px;
+        margin-top: 10%;        
+    } 
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:320px) and (max-width:369px){
+    .footer{
+        width: 100%;
+        display: flex;
+        height: 50px;
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 13px;
+    }
+    .back-to-top{
+        width: 20%;
+        margin-top: 5px;
+        margin-left: 15px;
+        /* background-color: blue; */
+    }
+    .back-to-top i{
+    
+        font-size: 30px;
+        color: grey;
+    }
+}
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Larger Than 370px & Smaller Than 420px Screens - Small & Medium MOBILES */
+
+/* HEADER SECTION CODE*/
+
+
+@media (min-width:370px) and (max-width:420px)  {
+    /* LOGO */
+    .logo{
+    margin-left: 2rem; 
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: block;
+        right: 40px;
+    }
+    /* SIDEBAR */
+    .sidebar.active {
+        left: 0;
+    }
+    .sidebar {
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        background: #333;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: block;
+    }
+    .nav-links a{
+        padding: 25px;
+        /* padding-top: 30px; */
+        /* padding-bottom: 30px; */
+        padding-left: 40px;
+        /* padding-right: 30px; */
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: 0.3s;  
+    }
+    .nav-links a:hover {
+        background: #575757;
+        /* padding: 15px; */
+        /* padding-left: 30px; */
+    }
+    .nav-links a::before{
+        display: none;
+    }
+    .nav-links a:hover::before{
+        display: none;
+    } 
+}
+    
+/* HOME SECTION CODE*/
+
+ @media (min-width:370px) and (max-width:420px){
+    .home{
+        padding-top: 8rem;
+    }
+    .hero-img img{
+        margin-left: 1.2rem;
+        margin-top: -1rem;
+        height: 330px;
+        width: 330px;
+    }
+    .hero-info-text h3{
+      margin-left: -4.2rem;
+      margin-top: 22rem;
+      font-size: 1.5rem;
+      
+    }
+    .hero-info-text h1{
+        margin-left: -5.8rem;
+        margin-top: 0.5rem;
+        font-size: 3.5rem;  
+    }
+    .color-text{
+        margin-left: -4rem;
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .cv-btn{
+        margin-left: -3.8rem;
+        padding: 0.5rem 1rem;
+    }
+    .socials{
+        margin-left: -6rem;
+        gap: 2rem;
+    }
+    
+}
+    
+/* SERVICE SECTION CODE */
+    
+@media (min-width:370px) and (max-width:420px){
+    
+    .services{
+        padding-top: 5rem;  
+    }
+    
+    .service-container{
+        width: 363px;
+        height: 130px;
+        margin-left: 2px;
+    }
+    .service-list-items img{
+        width: 120px;
+        height: 130px; 
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+/* ABOUT SECTION CODE */
+    
+@media (min-width:370px) and (max-width:420px){
+        
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR   */
+    
+    .about-container{
+        width: 360px;
+        height: 1440px;
+        margin-left: 0.5rem; 
+        border: 1px solid grey;
+        /* background-color: yellow;  */
+    }
+    .about-nav-links{
+        height: 200px;
+        border: none;  
+    }
+    #abt-tab{
+        margin-left: 0;    
+    }
+    .about-nav-buttons button {
+        width: 100%;
+        height: 70px;
+        border: none;
+        font-size: 25px;
+        border-bottom: 2px solid grey;
+    }
+}
+    
+/* ABOUT-TAB */
+@media (min-width:370px) and (max-width:420px){
+    .nav-buttons{
+        border: none;
+    }
+    .nav-content-tab{
+        display: block;
+    }
+    .about-tab-img img{
+        width: 310px;
+        height: 350px;
+        margin-left: 10px;
+        margin-top: 6rem;
+    }
+    .content-text-tab h1{
+        margin-left: 20px;
+        margin-top: 3rem;
+    }
+    .content-text-tab p{
+        margin-left: 20px;     
+    }
+    .full-name{
+        margin-left: 20px;
+    }
+    .full-name h2{
+        font-size: 17px;
+    }
+    .my-details{
+        display: block;
+        margin-left: 20%;    
+    }
+    .phone{
+        margin-top:20px;
+        margin-left: 20px;
+    }
+    .social-media{
+        margin-left: 20px;
+    }
+}
+    
+/* SKILLSET-TAB */
+    
+@media (min-width:370px) and (max-width:420px){
+    
+    .skill-tab{
+        display: block;
+        
+    }
+    .skill-content{
+        width: 300px;
+        margin-left: 10px;
+        /* margin-top: 6rem; */
+        /* background-color: red; */
+    }
+    #skill-content{
+    margin-top: 40px;
+    }
+    .skill-quote{
+        width: 300px;
+        margin-top: 6rem;
+        font-size: 15px;
+        width: 360px;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-tab-img img{
+        width: 300px;
+        height: 300px;
+        margin-top: 13rem;
+        margin-left: 10px;
+    }   
+}
+    
+/* EDUCATION-TAB */
+    
+@media (min-width:370px) and (max-width:420px){
+    .edu-quote{
+        margin-left: 10px;
+        margin-top: 5rem;
+        font-size: 20px;
+    }
+    .edu-container{
+        margin-left: -5px;
+
+    }
+    .card-container {
+        display: block; 
+    }
+    .ag-courses_item {
+        width: 300px;
+        height: 300px;
+    }
+    .study{
+        margin-top: -20px;
+        margin-left: 60px;
+    }
+    .college{
+        margin-top: -5px;
+        margin-left: 40px;
+    }
+    .course{
+        margin-top: -5px;
+        margin-left: 100px;
+    }
+    .branch{
+        margin-top: -5px;
+        margin-left: 30px;
+    }
+    .duration {
+        margin-top: -5px;
+        margin-left: 90px;
+    }
+    
+    .cgpa{
+        margin-top: -5px;
+        margin-left: 70px;
+    }
+    .nuz{
+        margin-top: 8px;
+        margin-left: 60px;
+    }
+    #inter{
+        margin-left: 60px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 18px;
+    }
+    #mpc{
+        margin-left: 110px;
+        font-size: 18px;
+    }
+    #ssc{
+        margin-left: 110px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    
+}
+/* CERTIFICATIONS-TAB */
+@media (min-width:370px) and (max-width:420px) {
+    .cert-container h1{
+        margin-top: 5rem;
+        color: red;
+    }
+}
+
+/* WORK WITH ME */
+    @media (min-width:370px) and (max-width:420px){
+    .work-together{
+        height: 100px; 
+    }
+    .hire-me i{
+        font-size: 50px;
+        margin-top: 25px;
+        margin-left: 2%;
+    }
+    .hire-me h2{
+        margin-left: 5px;
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .hire-me button{
+        width: 90px;
+        margin-top: 6%;
+        margin-left: 3%;   
+    }
+    .hire-me button a{
+        font-size: 12px;
+    }
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:370px) and (max-width:420px){
+    .contact{
+        height: 1050px;
+        padding-top: 5rem;
+    }
+    .contact h2{
+        font-size: 40px;
+        margin-left: 10%;
+    }
+    .get-connect{
+        display: block;  
+    }
+    .contact-form{
+        margin-left: 5%;
+        height: 370px;
+        width: 437px;
+        /* border-bottom: 0.5px solid red; */
+    }
+    .mobile-view{
+        width: 450px;
+        height: 1px;
+        margin-top: 1rem;
+        background-color: grey;
+        margin-left: -10px ;
+        /* margin: 6px 0; */
+        /* transition: 0.4s; */
+    }
+   
+    .shk-hnd{
+        font-size: 70px;
+        margin-left: 40%;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 13%;
+        width: 300px;
+        margin-top: 10%;        
+    } 
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:370px) and (max-width:420px){
+    .footer{
+        width: 100%;
+        display: flex;
+        height: 50px;
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 13px;
+    }
+    .back-to-top{
+        width: 20%;
+        margin-top: 5px;
+        margin-left: 15px;
+        /* background-color: blue; */
+    }
+    .back-to-top i{
+    
+        font-size: 30px;
+        color: grey;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Larger Than 437px & Smaller Than 480px Screens - Large MOBILES */
+
+/* HEADER SECTION CODE*/
+
+
+@media (min-width:437px) and (max-width:479px) {
+    /* LOGO */
+    .logo{
+    margin-left: 3rem;  
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: block;
+        right: 40px;
+    }
+    /* SIDEBAR */
+    .sidebar.active {
+        left: 0;
+    }
+    .sidebar {
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        background: #333;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: block;
+    }
+    .nav-links a{
+        padding: 25px;
+        /* padding-top: 30px; */
+        /* padding-bottom: 30px; */
+        padding-left: 40px;
+        /* padding-right: 30px; */
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: 0.3s;  
+    }
+    .nav-links a:hover {
+        background: #575757;
+        /* padding: 15px; */
+        /* padding-left: 30px; */
+    }
+    .nav-links a::before{
+        display: none;
+    }
+    .nav-links a:hover::before{
+        display: none;
+    } 
+}
+    
+/* HOME SECTION CODE*/
+ @media (min-width:437px) and (max-width:479px){
+    .home{
+        padding-top: 8rem;
+    }
+    .hero-img img{
+        margin-left: 3rem;
+        margin-top: -1rem;
+        height: 350px;
+        width: 350px;
+    }
+    .hero-info-text h3{
+      margin-left: -4.3rem;
+      margin-top: 22rem;
+      font-size: 1.5rem;
+    }
+    .hero-info-text h1{
+        margin-left: -5.8rem;
+        margin-top: 0.5rem;
+        font-size: 3.5rem;  
+    }
+    .color-text{
+        margin-left: -4rem;
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .cv-btn{
+        margin-left: -3.8rem;
+        padding: 0.5rem 1rem;
+    }
+    .socials{
+        margin-left: -5.5rem;
+        gap: 2rem;
+    }
+}
+    
+/* SERVICE SECTION CODE */
+    
+@media (min-width:437px) and (max-width:479px){
+    
+    .services{
+        padding-top: 5rem;  
+    }
+    .service-container{
+        width: 393px;
+        height: 140px;
+        margin-left: 1.2rem;
+    }
+    .service-list-items img{
+        width: 130px;
+        height: 140px; 
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+     
+/* ABOUT SECTION CODE */
+    
+@media (min-width:437px) and (max-width:479px){
+        
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR   */
+    
+    .about-container{
+        width: 400px;
+        height: 1400px;
+        margin-left: 1.2rem; 
+        border: 1px solid grey;
+        /* background-color: yellow;  */
+    }
+    .about-nav-links{
+        height: 200px;
+        border: none;  
+    }
+    #abt-tab{
+        margin-left: 0;    
+    }
+    .about-nav-buttons button {
+        width: 100%;
+        height: 70px;
+        border: none;
+        font-size: 25px;
+        border-bottom: 2px solid grey;
+    }
+}
+    
+/* ABOUT-TAB */
+@media (min-width:437px) and (max-width:479px){
+    .nav-buttons{
+        border: none;
+    }
+    .nav-content-tab{
+        display: block;
+    }
+    .about-tab-img img{
+        width: 350px;
+        height: 350px;
+        margin-left: 10px;
+        margin-top: 6rem;
+    }
+    .content-text-tab h1{
+        margin-left: 20px;
+        margin-top: 3rem;
+    }
+    .content-text-tab p{
+        margin-left: 20px;     
+    }
+    .full-name{
+        margin-left: 20px;
+    }
+    .full-name h2{
+        font-size: 17px;
+    }
+    .my-details{
+        display: block;
+        margin-left: 20%;    
+    }
+    .phone{
+        margin-top:20px;
+        margin-left: 20px;
+    }
+    .social-media{
+        margin-left: 20px;
+    }
+}
+    
+/* SKILLSET-TAB */
+    
+@media (min-width:437px) and (max-width:479px){
+    
+    .skill-tab{
+        display: block;
+        
+    }
+    .skill-content{
+        width: 400px;
+        margin-left: 10px;
+        margin-top: 6rem;
+    }
+    #skill-content{
+    margin-top: 40px;
+    }
+    .skill-quote{
+        margin-top: 30px;
+        font-size: 18px;
+        width: 360px;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-tab-img img{
+        width: 300px;
+        height: 300px;
+        margin-top: 13rem;
+        margin-left: 20px;
+    }
+
+}
+    
+/* EDUCATION-TAB */
+    
+@media (min-width:437px) and (max-width:479px){
+    .edu-quote{
+        margin-left: 10px;
+        margin-top: 5rem;
+        font-size: 20px;
+    }
+    .edu-container{
+        margin-left: 1rem;
+    }
+    .card-container {
+        display: block; 
+    }
+    .ag-courses_item {
+        width: 300px;
+        height: 300px;
+    }
+    .study{
+        margin-top: -20px;
+        margin-left: 60px;
+    }
+    .college{
+        margin-top: -5px;
+        margin-left: 40px;
+    }
+    .course{
+        margin-top: -5px;
+        margin-left: 100px;
+    }
+    .branch{
+        margin-top: -5px;
+        margin-left: 30px;
+    }
+    .duration {
+        margin-top: -5px;
+        margin-left: 90px;
+    }
+    
+    .cgpa{
+        margin-top: -5px;
+        margin-left: 70px;
+    }
+    .nuz{
+        margin-top: 8px;
+        margin-left: 70px;
+    }
+    #inter{
+        margin-left: 60px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 18px;
+    }
+    #mpc{
+        margin-left: 110px;
+        font-size: 18px;
+    }
+    #ssc{
+        margin-left: 110px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    
+}
+/* CERTIFICATIONS-TAB */
+@media (min-width:437px) and (max-width:479px){
+    .cert-container h1{
+        margin-top: 5rem;
+        color: red;
+    }
+}
+/* WORK WITH ME */
+    @media (min-width:437px) and (max-width:479px){
+    .work-together{
+        height: 100px; 
+    }
+    .hire-me i{
+        font-size: 50px;
+        margin-top: 25px;
+        margin-left: 2%;
+    }
+    .hire-me h2{
+        margin-left: 5px;
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .hire-me button{
+        width: 100px;
+        margin-top: 5%;
+        margin-left: 10%;   
+    } 
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:437px) and (max-width:479px){
+    .contact{
+        height: 1050px;
+        padding-top: 5rem;
+    }
+    .contact h2{
+        font-size: 40px;
+        margin-left: 10%;
+    }
+    .get-connect{
+        display: block;  
+    }
+    .contact-form{
+        margin-left: 5%;
+        height: 370px;
+        width: 437px;
+        /* border-bottom: 0.5px solid red; */
+    }
+    .mobile-view{
+        width: 450px;
+        height: 1px;
+        margin-top: 1rem;
+        background-color: grey;
+        margin-left: -10px ;
+        /* margin: 6px 0; */
+        /* transition: 0.4s; */
+    }
+    .shk-hnd{
+        font-size: 70px;
+        margin-left: 40%;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 13%;
+        width: 320px;
+        margin-top: 10%;        
+    } 
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:437px) and (max-width:479px){
+    .footer{
+        width: 480px;
+        display: flex;
+        height: 60px;
+        /* background-color: yellow; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 20%;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .back-to-top i{
+    
+        font-size: 35px;
+        color: grey;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Smaller Than 480px & Down Screens  -  MOBILES */
+
+/* HEADER SECTION CODE*/
+
+
+@media (min-width:480px) and (max-width:599px) {
+    /* LOGO */
+    .logo{
+    margin-left: 3rem; 
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: block;
+    }
+    /* SIDEBAR */
+    .sidebar.active {
+        left: 0;
+    }
+    .sidebar {
+        height: 100vh;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        background: #333;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: block;
+    }
+    .nav-links a{
+        padding: 25px;
+        /* padding-top: 30px; */
+        /* padding-bottom: 30px; */
+        padding-left: 40px;
+        /* padding-right: 30px; */
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: 0.3s;  
+    }
+    .nav-links a:hover {
+        background: #575757;
+        /* padding: 15px; */
+        /* padding-left: 30px; */
+    }
+    .nav-links a::before{
+        display: none;
+    }
+    .nav-links a:hover::before{
+        display: none;
+    }
+}
+    
+/* HOME SECTION CODE*/
+
+ @media (min-width:480px) and (max-width:599px){
+    .home{
+        padding-top: 8rem;
+    }
+    .hero-img img{
+        margin-left: 3.7rem;
+        margin-top: -1rem;
+        height: 350px;
+        width: 350px;
+    }
+    .hero-info-text h3{
+      margin-left: -4.5rem;
+      margin-top: 22rem;
+      font-size: 1.5rem;
+    }
+    .hero-info-text h1{
+        margin-left: -6rem;
+        margin-top: 0.5rem;
+        font-size: 3.5rem;  
+    }
+    .color-text{
+        margin-left: -4.5rem;
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .cv-btn{
+        margin-left: -4.2rem;
+        padding: 0.5rem 1rem;
+    }
+    .socials{
+        margin-left: -5.8rem;
+        gap: 2rem;
+    }
+    
+}
+    
+/* SERVICE SECTION CODE */
+    
+@media (min-width:480px) and (max-width:599px){
+    .services{
+        padding-top: 5rem;  
+    }
+    .service-container{
+        width: 393px;
+        height: 140px;
+        margin-left: 3rem;
+    }
+    .service-list-items img{
+        width: 130px;
+        height: 140px; 
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+      
+/* ABOUT SECTION CODE */
+    
+@media (min-width:480px) and (max-width:599px){
+        
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR   */
+    
+    .about-container{
+        width: 400px;
+        height: 1400px;
+        margin-left: 3rem; 
+        border: 1px solid grey;
+        /* background-color: yellow;  */
+    }
+    .about-nav-links{
+        height: 200px;
+        border: none;  
+    }
+    #abt-tab{
+        margin-left: 0;    
+    }
+    .about-nav-buttons button {
+        width: 100%;
+        height: 70px;
+        border: none;
+        font-size: 25px;
+        border-bottom: 2px solid grey;
+    }
+}
+    
+/* ABOUT-TAB */
+@media (min-width:480px) and (max-width:599px){
+    .nav-buttons{
+        border: none;
+    }
+    .nav-content-tab{
+        display: block;
+    }
+    .about-tab-img img{
+        width: 350px;
+        height: 350px;
+        margin-left: 10px;
+        margin-top: 6rem;
+    }
+    .content-text-tab h1{
+        margin-left: 20px;
+        margin-top: 3rem;
+    }
+    .content-text-tab p{
+        margin-left: 20px;     
+    }
+    .full-name{
+        margin-left: 20px;
+    }
+    .full-name h2{
+        font-size: 17px;
+    }
+    .my-details{
+        display: block;
+        margin-left: 20%;    
+    }
+    .phone{
+        margin-top:20px;
+        margin-left: 20px;
+    }
+    .social-media{
+        margin-left: 20px;
+    }
+}
+    
+/* SKILLSET-TAB */
+    
+@media (min-width:480px) and (max-width:599px){
+    
+    .skill-tab{
+        display: block;
+        
+    }
+    .skill-content{
+        width: 400px;
+        margin-left: 10px;
+        margin-top: 6rem;
+    }
+    #skill-content{
+    margin-top: 40px;
+    }
+    .skill-quote{
+        margin-top: 30px;
+        font-size: 18px;
+        width: 360px;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-tab-img img{
+        width: 300px;
+        height: 300px;
+        margin-top: 13rem;
+        margin-left: 20px;
+    }
+    
+    
+}
+    
+/* EDUCATION-TAB */
+    
+@media (min-width:480px) and (max-width:599px){
+      
+    .edu-quote{
+        margin-left: 10px;
+        margin-top: 5rem;
+        font-size: 20px;
+    }
+    .edu-container{
+        margin-left: 1rem;
+    }
+    .card-container {
+        display: block; 
+    }
+    .ag-courses_item {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .study{
+        margin-top: -20px;
+        margin-left: 60px;
+    }
+    .college{
+        margin-top: -5px;
+        margin-left: 40px;
+    }
+    .course{
+        margin-top: -5px;
+        margin-left: 100px;
+    }
+    .branch{
+        margin-top: -5px;
+        margin-left: 30px;
+    }
+    .duration {
+        margin-top: -5px;
+        margin-left: 90px;
+    }
+    
+    .cgpa{
+        margin-top: -5px;
+        margin-left: 70px;
+    }
+    .nuz{
+        margin-top: 8px;
+        margin-left: 60px;
+    }
+    #inter{
+        margin-left: 60px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 18px;
+    }
+    
+    #mpc{
+        margin-left: 110px;
+        font-size: 18px;
+    }
+    #ssc{
+        margin-left: 110px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 20px;
+        font-size: 20px;
+    }  
+}
+/* CERTIFICATIONS-TAB */
+@media (min-width:480px) and (max-width:599px){
+    .cert-container h1{
+        margin-top: 5rem;
+        color: red;
+    }
+}
+    
+/* WORK WITH ME */
+    @media (min-width:480px) and (max-width:599px){
+    .work-together{
+        height: 100px; 
+    }
+    .hire-me i{
+        font-size: 50px;
+        margin-top: 25px;
+        margin-left: 2%;
+    }
+    .hire-me h2{
+        margin-left: 5px;
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 20px;  
+    }
+    .hire-me button{
+        width: 100px;
+        margin-top: 5%;
+        margin-left: 10%;   
+    } 
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:480px) and (max-width:599px){
+    .contact{
+        height: 1050px;
+        padding-top: 5rem;
+    }
+    .contact h2{
+        font-size: 40px;
+        margin-left: 10%;
+    }
+    .get-connect{
+        display: block;  
+    }
+    .contact-form{
+        margin-left: 5%;
+        height: 370px;
+        width: 420px;
+        /* border-bottom: 0.5px solid grey; */
+    }
+    .mobile-view{
+        width: 450px;
+        height: 1px;
+        margin-top: 1rem;
+        background-color: grey;
+        margin-left: -10px ;
+        /* margin: 6px 0; */
+        /* transition: 0.4s; */
+    }
+   
+    .shk-hnd{
+        font-size: 70px;
+        margin-left: 40%;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 13%;
+        width: 320px;
+        margin-top: 10%;        
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:480px) and (max-width:599px){
+    .footer{
+        width: 480px;
+        display: flex;
+        height: 60px;
+        /* background-color: yellow; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 20%;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .back-to-top i{
+    
+        font-size: 35px;
+        color: grey;
+    }
+}
+
+ /* MEDIA QUERIES */
+
+
+
+/* Responsive For Larger Than 600px & Smaller Than 768px Screens  - TABS */
+
+/* HEADER SECTION CODE */
+
+@media (min-width:600px) and (max-width:767px) {
+    .header{
+        gap: 4rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 2rem; 
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: none;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: flex;
+        gap: 2.5rem;
+    }
+}
+    
+/* HOME SECTION CODE */
+@media (min-width:600px) and (max-width:767px){
+    .hero-img img{
+        margin-left: 7rem;
+    }
+    .hero-info-text h3{
+      margin-left: -6rem;
+      margin-top: 30rem;
+      font-size: 2rem;
+    }
+    .hero-info-text h1{
+        margin-left: -7rem;
+        margin-top: 1rem;
+        font-size: 4rem;
+    }
+    .color-text{
+        margin-left: -5rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .cv-btn{
+        margin-left: -4.5rem;
+    }
+    .socials{
+        margin-left: -7rem;
+        gap: 3rem;
+    }
+}
+    
+/* SERVICES SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+    
+    .services{
+        padding-top: 5rem;
+    }
+    .service-list-container{
+        justify-content: space-between;
+    }
+ 
+    .list-item-text h2{
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+    
+/* ABOUT SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+            
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR   */
+    
+    .about-container{
+        height: 1400px;
+        margin-left: 1.5rem; 
+        /* width: 550px; */
+        /* border: 1px solid grey; */
+        /* background-color: yellow;  */
+    }
+    .about-nav-links{
+        height: 280px; 
+        /* border: none; */
+    }
+    #abt-tab{
+        margin-left: 0;    
+    }
+    .about-nav-buttons button {
+        width: 100%;
+        height: 70px;
+        border: none;
+        font-size: 25px;
+        border-bottom: 2px solid grey;
+    }
+}
+    
+/* ABOUT-TAB */
+@media (min-width:600px) and (max-width:767px){
+    .nav-buttons{
+        height: 70rem;
+    
+    }
+    .nav-content-tab{
+        display: block;
+    }
+    .about-tab-img img{
+        width: 300px;
+        height: 300px;
+        margin-left: 6rem;
+        margin-top: 5rem;
+    
+    }
+    .content-text-tab h1{
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+    .content-text-tab p{
+        margin-left: 8%;
+        margin-top: 1rem ;
+        font-size: 15px; 
+        line-height: 1.5;
+    }
+   
+    .full-name h2{
+        font-size: 20px;
+    }
+    
+    .my-details{
+        display: block;
+        margin-left: 9rem;    
+    }
+    .phone{
+        margin-top:20px;
+        margin-left: 1.5rem;
+    }
+    .social-media{
+        margin-left: 2rem;
+    }
+}
+    
+/* SKILLSET-TAB */
+    
+@media (min-width:600px) and (max-width:767px){
+    
+    .skill-tab{
+        display: block;  
+    }
+    .skill-content{
+        width: 400px;
+        margin-left: 10px;
+        margin-top: 1rem;
+    }
+    #skill-content{
+    margin-top: 30px;
+    }
+    .skill-quote{
+        margin-top: 30px;
+        font-size: 20px;
+        width: 520px;
+    }
+    .skill-quote-span{
+        margin-left: 15%;
+    }
+    .skill-tab-img img{
+        height: 400px;
+        margin-top: 10rem;
+        margin-left: 40px;
+    }     
+}
+    
+/* EDUCATION-TAB */
+
+@media (min-width:600px) and (max-width:767px){
+      
+    .edu-quote{
+        margin-left: 10px;
+        margin-top: 1rem;
+    }
+    .edu-quote-span{
+        margin-left: 40px;
+    }
+    .edu-container {
+        margin-left: 5rem;
+    }  
+    .card-container {
+        display: block;  
+    }
+    .ag-courses_item {
+        height: 300px;
+    } 
+    .study{
+        margin-top: -20px;
+        margin-left: 60px;
+    }
+    .college{
+        margin-top: -5px;
+        margin-left: 40px;
+    }
+    .course{
+        margin-top: -5px;
+        margin-left: 100px;
+    }
+    .branch{
+        margin-top: -5px;
+        margin-left: 30px;
+    }
+    .duration {
+        margin-top: -5px;
+        margin-left: 90px;
+    }
+    .cgpa{
+        margin-top: -5px;
+        margin-left: 70px;
+    }
+    .nuz{
+        margin-top: 8px;
+        margin-left: 70px;
+    }
+    #inter{
+        margin-left: 60px;
+    }
+    #puc{
+        margin-left: 40px;
+    }
+    #mpc{
+        margin-left: 110px;
+    }
+    #ssc{
+        margin-left: 110px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 20px;   
+    }  
+}
+/* CERTIFICATIONS-TAB */
+@media (min-width:600px) and (max-width:767px){
+    .cert-container h1{
+        margin-top: 3rem;
+        color: red;
+    } 
+} 
+/* WORK WITH ME */
+@media (min-width:600px) and (max-width:767px){
+    .work-together{
+        margin-left: 0;
+        height: 100px;
+    }
+    .hire-me i{
+        font-size: 50px;
+        margin-top: 25px;
+        margin-left: 2%;
+    }
+    .hire-me h2{
+        margin-left: 10px;
+        margin-top: 35px;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    .hire-me button{
+        margin-left: 5rem;
+    }  
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+    .contact{
+        height: 1050px;
+    }
+    .contact h2{
+        font-size: 40px;
+        margin-left: 10%;
+    }
+    .get-connect{
+        display: block;   
+    }
+    .contact-form{
+        margin-left: 5%;
+    }
+    .mobile-view{
+        /* width: 570px; */
+        width: 100%;
+        height: 1px;
+        margin-top: 2rem;
+        background-color: grey;
+        margin-left: -10px ;
+        /* margin: 6px 0; */
+        /* transition: 0.4s; */
+    }
+    .shk-hnd{
+        font-size: 90px;
+        margin-left: 40%;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 10%;
+        width: 320px;
+        margin-top: 10%;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:600px) and (max-width:767px){
+    .footer{
+        width: 590px;
+        display: flex;
+        height: 50px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 14px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 10px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 35px;
+    }
+    
+}
+    
+
+/* MEDIA QUERIES */
+
+
+/* Responsive For Larger Than 768px & Smaller Than 992px Screens  - TABS */
+
+
+/* HEADER SECTION CODE*/
+
+@media (min-width:768px) and (max-width:991px) {
+    .header{
+        gap: 7rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 2rem; 
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: none;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: flex;
+        gap: 4rem;
+    }
+}
+    
+/* HOME SECTION CODE */
+@media (min-width:768px) and (max-width:991px){
+
+    .home{
+        padding-top: 8rem;
+    }
+    .hero-img img{
+        margin-left: 4rem;
+        height: 350px;
+        width: 350px;
+    }
+    .hero-info-text h3{
+        margin-left: 10rem;
+        margin-top: 4rem;
+        font-size: 1.5rem;
+    }
+    .hero-info-text h1{
+        margin-left: 9rem;
+        margin-top: 1rem;
+        font-size: 3.5rem;    
+    }
+    .color-text{
+        margin-left: 10rem;
+        font-size: 1.2rem;
+    }
+    .cv-btn{
+        margin-left: 10rem;
+    
+    }
+    .socials{
+        margin-left: 9rem;
+        gap: 2rem;
+    }  
+}
+    
+/* SERVICE SECTION CODE */
+    
+@media (min-width:768px) and (max-width:991px){
+    
+    .services{
+        padding-top: 6rem; 
+    }
+    .service-list-container{
+        justify-content: space-around;
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+/* ABOUT SECTION CODE */
+
+@media (min-width:768px) and (max-width:991px){
+    .about{
+        padding-top: 5rem;
+        height: 500px;
+        /* background-color: yellow; */
+    }
+    
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+    
+    .about-container{ 
+        height: 430px;
+        margin-left: 35px; 
+        /* background-color: yellow; */
+    }
+    .about-nav-links{
+        height: 48px;
+        /* border: 1px solid green; */
+    }
+    #abt-tab{
+        margin-left: 2px;    
+    }
+    .about-nav-buttons button {
+        width: 24.4%;
+        height: 47px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}  
+/* ABOUT-TAB */
+@media (min-width:768px) and (max-width:991px){
+
+    .nav-buttons{
+        /* border: 1px solid magenta; */
+        height: 375px;
+    }
+    .nav-content-tab{
+        display: flex;
+    }
+    .about-tab-img img{
+        width: 250px;
+        height: 300px;
+        margin-left: -10px;
+        margin-top: 2rem;
+        /* border: 1px solid red; */
+    }
+    .content-text-tab h1{
+        margin-left: 5%; 
+        margin-top: -14px;
+        font-size: 17px;
+    }
+    .content-text-tab p{
+        margin-left: 5%;
+        font-size: 13px; 
+        line-height: 1;
+        margin-top: -12px;     
+    }   
+    .full-name{
+        margin-left: 5%;
+        margin-top: -2%;
+    }
+    .full-name h2{
+        margin-top: -15px;
+        font-size: 15px;
+    }
+    .my-details{
+        display: flex;
+        margin-left: 7%;
+        gap: 20px;
+    }
+    #mail{
+        font-size: 15px;
+    }
+    #loc{
+        font-size: 15px;
+    }
+    .phone{
+        margin-top: 0px;
+    }
+    .social-media{
+        gap: 25px;
+    }
+}   
+    
+/* SKILLSET-TAB */
+@media (min-width:768px) and (max-width:991px){
+   
+    .skill-content{
+        margin-left: 5%;
+        margin-top: -2rem;
+    }
+    #skill-content{
+        margin-top: -20px;  
+    }
+    .skill-quote{
+        margin-top: 20px;
+        font-size: 15px;
+        width: 520px;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-content h1{
+        margin-top: 10px;
+    }
+    .technologies{
+        margin-top: -10px;
+    }
+    .skill-tab-img img{
+        width: 300px;
+        height: 330px;
+        margin-top: 6px;
+        margin-left: -60%;  
+    }
+}
+/* EDUCATION-TAB */
+
+@media (min-width:768px) and (max-width:991px){
+    .edu-quote{  
+        margin-left: 7%;
+        font-size: 15px;
+        margin-top: -1px;
+    }
+    .edu-quote-span{
+        margin-left: 0px;
+    }
+    .edu-container {
+        margin-top: 1rem;
+        margin-left: -1%;
+    } 
+    .card-container {
+        display: flex;
+    } 
+    .ag-courses_item {
+        width: 200px;
+        height: 300px;
+    }
+    .study{
+        margin-top: -5px;
+        margin-left: 40px;
+        font-size: 13px;
+    }
+    .college{
+        margin-top: -5px;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+    .course{
+        margin-top: -5px;
+        margin-left: 50px;
+    }
+    .branch{
+        margin-top: -5px;
+        margin-left: 5px;
+        font-size: 10px;
+    }
+    #branch{
+        font-size: 15px;
+    }
+    .cse{
+        margin-left: 27px;
+    }
+    .duration {
+        margin-top: -5px;
+        margin-left: 40px;
+    }
+    .cgpa{
+        margin-top: -5px;
+        margin-left: 20px;
+    }
+    .nuz{
+        margin-top: 10px;
+        margin-left: 15px;
+        font-weight: 660;
+        font-size: 11px;  
+    }
+    
+    #inter{
+        margin-left: 34px;
+    }
+    #puc{
+        margin-left: 25px;
+        font-size: 15px;
+        margin-top: -5px ;
+    }
+    .puc-span{
+        margin-left: 25px;
+    }
+
+    #mpc{
+        margin-left: 60px;
+        font-size: 18px;
+    }
+    #ssc{
+        margin-left: 65px;
+    } 
+    .zphs{
+        margin-left: 30px;
+    }
+    #ss{
+        margin-left: 35px;
+        font-size: 20px;
+    }
+    #ssc-duration{
+        margin-top: -2rem;
+    }
+    
+}
+
+/* CERTIFICATIONS-TAB */
+@media (min-width:768px) and (max-width:991px){
+    .cert-container h1{
+        margin-top: -1.5rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+}
+/* WORK WITH ME */
+@media (min-width:768px) and (max-width:991px){
+    .work-with-me{
+        padding-top: 5.4rem;  
+    }
+    .work-together{
+        height: 100px;
+    }
+    .hire-me i{
+        font-size: 70px;
+        margin-top: 15px;
+        margin-left: 2%;
+    }
+    .hire-me h2{
+        margin-top: 35px;
+        font-size: 30px;
+    }
+    .hire-me button{
+        width: 100px;
+        margin-top: 3%;
+        margin-left: 25%;
+    }
+       
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:768px) and (max-width:991px){
+    .contact{
+        padding-top: 5rem;
+        height: 510px;  
+    }
+    .contact h2{
+        font-size: 30px;
+        margin-left: 5%;
+    }
+    .get-connect{
+        display: flex;
+        gap: 2%;      
+    }
+    .contact-form{
+        margin-left: 4%; 
+        /* background-color: yellow; */
+    }
+    .shk-hnd{
+        font-size: 40px;
+        margin-left: 1rem;
+        margin-top: 17%;
+    }
+    .contact-footer{
+        margin-left: 1rem;
+        width: 270px;
+        margin-top: -1rem;
+    }  
+    .contact-footer-items{
+        height: 60px;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:768px) and (max-width:991px){
+    .footer{
+        /* width: 590px; */
+        width: 100%;
+        display: flex;
+        height: 50px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 10px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 35px;
+    }
+    
+}
+    
+/* MEDIA QUERIES */
+
+/* Responsive For Largerer Than 992px & Smaller Than 1023px Screens  - Small Laptops */
+
+/* HEADER SECTION CODE */
+
+@media (min-width:992px) and (max-width:1023px) {
+    .header{
+        gap: 9rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 3rem; 
+    }
+    /* MENU-ICON */
+    .menu-icon {
+        display: none;
+    }
+    /* NAVBAR */
+    .navbar{
+        display: flex;
+        gap: 7rem;
+    }
+}
+/* HOME SECTION CODE */
+@media (min-width:992px) and (max-width:1023px){
+    .home{
+        padding-top: 8rem;
+    }
+    .hero-img img{
+        margin-left: 5rem;
+        height: 350px;
+        width: 350px;
+        /* border: 2px solid red; */
+    }
+    .hero-info-text h3{
+        margin-left: 10rem;
+        margin-top: 4rem;
+        font-size: 1.5rem;
+    }
+    .hero-info-text h1{
+        margin-left: 9rem;
+        margin-top: 1rem;
+        font-size: 3.5rem;    
+    }
+    .color-text{
+        margin-left: 10rem;
+        font-size: 1.2rem;
+    }
+    .cv-btn{
+        margin-left: 10rem;
+    }
+    .socials{
+        margin-left: 8rem;
+        gap: 3rem;
+    }  
+}
+            
+/* ABOUT SECTION CODE */
+@media (min-width:992px) and (max-width:1023px){
+    .about{
+        padding-top: 6rem;
+    }
+}
+/* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+@media (min-width:992px) and (max-width:1023px){
+    .about-container{
+        width: 92%;
+        margin-left: 50px; 
+        height: 550px;
+        /* background-color: yellow; */
+    }
+    .about-nav-links{
+        height: 72px;
+        width: 100%;
+    }
+    .about-nav-buttons{
+        width: 100%;
+    }
+    .about-nav-buttons button {
+        width: 24.6%;
+    }
+}
+
+/* ABOUT-TAB */
+@media (min-width:992px) and (max-width:1023px){
+  
+    .content-text-tab h1{
+        margin-left: 5%; 
+        margin-top: -10px;
+        font-size: 20px;
+    }
+    .content-text-tab p{
+        margin-left: 5%;
+        font-size: 15px; 
+        line-height: 1.2;
+        margin-top: -12px;     
+    }
+    .full-name{
+        margin-left: 5%;
+        margin-top: 1%;
+    }
+    .full-name h2{
+        margin-top: -10px;
+        font-size: 18px;
+    }   
+    .my-details{
+        display: flex;
+        margin-left: 7%;
+        gap: 20px;
+    }
+}      
+/* SKILLSET-TAB */
+@media (min-width:992px) and (max-width:1023px){
+   
+    .skill-content{
+        margin-left: 5%;
+        margin-top: 1rem;
+        /* background-color: yellow; */
+    }
+    #skill-content{
+        margin-top: 10px;  
+    }
+    .skill-quote{
+        margin-top: 20px;
+        font-size: 18px;
+        width: 520px;
+    }
+    .skill-quote-span{
+        margin-left: 15%;
+    }
+    .skill-content h1{
+        margin-top: 20px;
+    }
+    .technologies{
+        margin-top: -10px;
+    }
+    .skill-tab-img img{
+        width: 350px;
+        height: 400px;
+        margin-top: 4rem;
+        margin-left: -10%;  
+    }
+}
+/* EDUCATION-TAB */
+@media (min-width:992px) and (max-width:1023px){
+    .edu-quote{  
+        margin-left: 9%;
+        font-size: 20px;
+    }
+    .edu-container {
+        margin-top: 0.7rem;
+        margin-left: -1%;
+    }
+    .nuz{
+        margin-top: 10px;
+        margin-left: 40px;
+    }  
+}  
+
+/* CERTIFICATIONS-TAB */
+@media (min-width:992px) and (max-width:1023px){
+    .cert-container h1{
+        margin-top: 2rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+}
+/* WORK WITH ME */
+@media (min-width:992px) and (max-width:1023px){
+    .work-with-me{
+        padding-top: 5.4rem;  
+    }
+    /* .work-together{
+        height: 100px;
+    } */
+    /* .hire-me i{
+        font-size: 70px;
+        margin-top: 15px;
+        margin-left: 2%;
+    } */
+    /* .hire-me h2{
+        margin-top: 35px;
+        font-size: 30px;
+    } */
+    .hire-me button{
+        margin-top: 5%;
+        margin-left: 30%;
+    }
+       
+}
+/* CONTACT SECTION CODE */    
+@media (min-width:992px) and (max-width:1023px){
+
+    .get-connect{
+        gap: 5rem;      
+    }
+    .contact-form{
+        margin-left: 6%;
+    }
+    .shk-hnd{
+        font-size: 80px;
+        margin-left: 1rem;
+        margin-top: 5rem;
+    }
+    .contact-footer{
+        margin-left: 0%;
+    }
+    .contact-footer-items{
+        height: 60px;
+    }
+}  
+/* FOOTER SECTION CODE */
+    
+@media (min-width:992px) and (max-width:1023px){
+    .footer{
+        display: flex;
+        height: 60px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 10px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 40px;
+    }
+}
+    
+
+/* MEDIA QUERIES */
+
+/* Responsive For Largerer Than 1024px & Smaller Than 1280px Screens - Medium Laptops */
+
+/* HEADER SECTION CODE*/
+
+@media (min-width:1024px) and (max-width:1279px) {
+    .header{
+        gap: 9rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 3rem; 
+    }
+    .navbar{
+        gap: 8rem;
+    }  
+}
+    
+/* HOME SECTION CODE */
+@media (min-width:1024px) and (max-width:1279px){
+    .home{
+        padding-top: 12rem;
+    }
+    .hero-img img{
+        margin-left: 9rem;
+    }
+    .hero-info-text h1{
+        margin-left: 9rem; 
+    }
+    .cv-btn{
+        margin-top: 2rem;
+    }
+    .socials{
+        margin-left: 9rem;
+        gap: 3rem;
+        margin-top: 2rem;
+    }  
+}
+    
+/* ABOUT SECTION CODE */
+
+@media (min-width:1024px) and (max-width:1279px){
+
+    .about{
+        padding-top: 5rem;
+        height: 680px;
+        /* background-color: yellow; */
+        /* border: 2px solid red; */
+    }
+    
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+    
+    .about-container{ 
+        height: 600px;
+        margin-left: 45px; 
+        /* background-color: yellow; */
+        /* border: 2px solid red; */
+    }
+    .about-nav-buttons{
+        margin-top: 1px;
+        /* border: 1px solid blue; */
+    }
+    #abt-tab{
+        margin-left: 3px;    
+    }
+    .about-nav-buttons button {
+        width: 24.5%;
+        height: 70px;
+        font-size: 30px;
+    }
+}  
+/* ABOUT-TAB */
+@media (min-width:1024px) and (max-width:1279px){
+
+    .nav-buttons{
+        /* border: 1px solid magenta; */
+        height: 520px;
+        /* margin-top: 2px; */
+    }
+    .content-text-tab h1{
+        margin-top: -10px;
+        font-size: 25px;
+    }
+}   
+    
+/* SKILLSET-TAB */
+@media (min-width:1024px) and (max-width:1279px){
+   
+    .skill-content{
+        margin-left: 5%;
+        margin-top: 1rem;
+    }
+    #skill-content{
+        margin-top: 0rem;  
+    }
+    .skill-quote-span{
+        margin-left: 10%;
+    }
+    .skill-content h1{
+        margin-top: 30px;
+    }
+    .skill-tab-img img{
+        width: 400px;
+        height: 400px;
+        margin-top: 60px;
+        margin-left: -18%;  
+    }
+}
+/* EDUCATION-TAB */
+
+@media (min-width:1024px) and (max-width:1279px){
+    .edu-quote{  
+        margin-left: 8%;
+        font-size: 22px;
+        margin-top: 10px;
+    }
+    .edu-quote-span{
+        margin-left: 0px;
+    }
+    .edu-container {
+        margin-top: 1rem;
+        margin-left: 10%;
+    } 
+    .card-container {
+        display: flex;
+        margin-left: -6.5rem;
+    } 
+    .ag-courses_item {
+        width: 280px;
+        height: 400px;
+    }
+    .study{
+        margin-top: 10px;
+        margin-left: 60px;
+        font-size: 20px;
+    }
+    .college{
+        margin-top: 0rem;
+        margin-left: 1.7rem;
+        font-size: 15px;
+    }
+    .course{
+        margin-top: 0px;
+        margin-left: 80px;
+    }
+    .branch{
+        margin-top: 0px;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+    #branch{
+        font-size: 20px;
+    }
+    .cse{
+        margin-left: 45px;
+    }
+    .duration {
+        margin-top: -5px;
+        margin-left: 70px;
+        font-size: 18px;
+    }
+    .cgpa{
+        margin-top: 0px;
+        margin-left: 60px;
+    }
+    .nuz{
+        margin-top: 20px;
+        margin-left: 50px;
+        font-size: 11px;  
+    }
+    #inter{
+        margin-left: 50px;
+    }
+    #puc{
+        margin-left: 50px;
+        font-size: 20px;
+        margin-top: -5px ;
+    }
+    .puc-span{
+        margin-left: 35px;
+    }
+    #mpc{
+        margin-left: 100px;
+        font-size: 20px;
+    }
+    #ssc{
+        margin-left: 100px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 25px;
+        font-size: 20px;
+    }
+    #ssc-duration{
+        margin-top: 0rem;
+    }
+    
+}
+    
+/* CERTIFICATIONS-TAB */
+@media (min-width:1024px) and (max-width:1279px){
+    .cert-container h1{
+        margin-top: 2rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+}
+    
+/* WORK WITH ME */
+@media (min-width:1024px) and (max-width:1279px){
+    .work-with-me{
+        padding-top: 8rem;  
+    }
+    .work-together{
+        height: 150px;
+    }
+    .hire-me{
+        display: flex;
+    }
+    .hire-me i{
+        font-size: 80px;
+        margin-top: 30px;
+        margin-left: 2% !important;
+    }
+    .hire-me h2{
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .hire-me button{
+        width: 120px;
+        margin-top: 5%;
+        margin-left: 30%;
+    }  
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:1024px) and (max-width:1279px){
+    .contact{
+        padding-top: 3rem;
+        height: 540px;  
+    }
+    .contact h2{
+        font-size: 50px;
+        margin-left: 8%;
+    }
+    .get-connect{
+        gap: 5rem;      
+    }
+    .contact-form{
+        margin-left: 6%; 
+        /* background-color: yellow; */
+    }
+    .input-field{
+        height: 60px;
+        font-size: 15px;
+    }
+    .shk-hnd{
+        font-size: 50px;
+        margin-left: 1rem;
+        margin-top: 10%;
+    }
+    .contact-footer{
+        margin-left: 1rem;
+        width: 320px;
+        margin-top: 0rem;
+    }  
+    .contact-footer-items{
+        height: 60px;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:1024px) and (max-width:1279px){
+    .footer{
+        display: flex;
+        height: 60px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 60px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 40px;
+    }
+    
+}
+    
+
+
+
+/* MEDIA QUERIES */
+
+/* Responsive For Largerer Than 1280px & Up Screens - Apple Laptops */
+
+/* HEADER SECTION CODE */
+
+@media (min-width:1280px) and (max-width:1399px) {
+    .header{
+        gap: 10rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 5rem; 
+    }
+    .navbar{
+        gap: 9rem;
+    }   
+    
+}
+            
+/* ABOUT SECTION CODE */
+ 
+/* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+
+@media (min-width:1280px) and (max-width:1399px){
+
+    #abt-tab{
+        margin-left: 6px;    
+    }
+    .about-nav-buttons button {
+        width: 24.5%;
+        height: 71px;
+        font-size: 30px;
+    }
+}
+/* ABOUT-TAB */
+@media (min-width:1280px) and (max-width:1399px){
+
+    .my-details{
+        gap: 150px;
+    } 
+}      
+/* SKILLSET-TAB */
+@media (min-width:1280px) and (max-width:1399px){
+    .skill-content{
+        margin-left: 5%;
+        margin-top: 1rem;
+    }
+    .skill-tab-img img{
+        width: 400px;
+        height: 450px;
+        margin-top: 10px;
+        margin-left: 25%; 
+    }
+}
+/* EDUCATION-TAB */
+@media (min-width:1280px) and (max-width:1399px){
+    .edu-quote{  
+        margin-left: 11%;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .edu-container {
+        margin-top: 1rem;
+        margin-left: 7%;
+    }    
+}  
+
+/* CERTIFICATIONS-TAB */
+@media (min-width:1280px) and (max-width:1399px){
+    .cert-container h1{
+        margin-top: 2rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+}
+
+/* WORK WITH ME */
+@media (min-width:1280px) and (max-width:1399px){
+    .hire-me button{
+        margin-left: 40%;
+    }     
+}
+/* CONTACT SECTION CODE */    
+@media (min-width:1280px) and (max-width:1399px){
+    .get-connect{
+        gap: 10rem;      
+    }
+    .contact-form{
+        margin-left: 7%; 
+        /* background-color: yellow; */
+    }
+    .shk-hnd{
+        font-size: 80px;
+        margin-left: 4rem;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 0rem;
+        width: 320px;
+        margin-top: 0rem;
+    }  
+}  
+/* FOOTER SECTION CODE */
+    
+@media (min-width:1280px) and (max-width:1399px){
+    .footer{
+        display: flex;
+        height: 60px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 60px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 40px;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Largerer Than 1400px & Smaller Than 1440 px Screens - Large Laptops & Desktops */
+
+/* HEADER SECTION CODE */
+
+@media (min-width:1400px) and (max-width:1439px) {
+    .header{
+        gap: 12rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 3rem; 
+    }
+    .navbar{
+        gap: 12rem;
+    }  
+    
+}
+    
+/* HOME SECTION CODE */
+@media (min-width:1400px) and (max-width:1439px){
+
+    .home{
+        padding-top: 13rem;
+    }
+    .hero-img img{
+        margin-left: 10rem;
+        height: 500px;
+        width: 500px;
+    }
+    .hero-info-text h3{
+        margin-left: 10rem;
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+    .hero-info-text h1{
+        margin-left: 7.5rem;
+        margin-top: 1rem;
+        font-size: 5rem;    
+    }
+    .color-text{
+        margin-left: 10rem;
+        font-size: 1.8rem;
+    }
+    .cv-btn{
+        margin-left: 10rem;
+        padding: 1rem 2.5rem;
+    }
+    .socials{
+        margin-left: 9rem;
+        gap: 1rem;
+    }  
+    .socials i{
+        font-size: 3.5rem;
+    }
+}
+    
+/* SERVICES SECTION CODE */
+    
+@media (min-width:1400px) and (max-width:1439px){
+    .services{
+        padding-top: 6rem; 
+    }
+    .service-container{
+        height: 200px;
+    }
+    .service-list-items img{
+        height: 200px;
+        width: 200px;
+    }
+    .service-list-container{
+        justify-content: space-around;
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+/* ABOUT SECTION CODE */
+
+@media (min-width:1400px) and (max-width:1439px){
+
+    .about{
+        padding-top: 6rem;
+        height: 790px;
+        /* background-color: yellow; */
+        /* border: 1px solid red; */
+    }
+    
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+    
+    .about-container{ 
+        width: 85%;
+        height: 700px;
+        margin-left: 7.2%; 
+        /* background-color: yellow; */
+        /* border: 1px solid magenta; */
+
+    }
+    .about-nav-links{
+        height: 80px;
+    }
+    .about-nav-buttons{
+        /* background-color: red; */
+        font-size: 17.2px;
+    }
+    #abt-tab{
+        margin-left: 2px;    
+    }
+    .about-nav-buttons button {
+        width: 24.68%;
+        height: 80px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}  
+/* ABOUT-TAB */
+@media (min-width:1400px) and (max-width:1439px){
+
+    .nav-buttons{
+        /* border: 1px solid magenta; */
+        height: 600px;
+        margin-top: 1px;
+    }
+    .nav-content-tab{
+        display: flex;
+    }
+    .about-tab-img img{
+        width: 450px;
+        height: 470px;
+        margin-left: 0px;
+        margin-top: 4rem;
+    }
+    .content-text-tab h1{
+        margin-left: 10%; 
+        margin-top: 15px;
+        font-size: 35px;
+    }
+    .content-text-tab p{
+        margin-left: 10%;
+        font-size: 18px; 
+        line-height: 1.5;
+        margin-top: -12px;     
+    }   
+    .full-name{
+        margin-left: 10%;
+    }
+    .full-name h3{
+        font-size: 25px;
+    }
+    .full-name h2{
+        font-size: 25px;
+        margin-top: -15px;
+    }
+
+    .my-details{
+        display: flex;
+        margin-left: 10%;
+        gap: 5rem;
+    }
+
+    .mail{
+        display: flex;
+        gap: 5px;
+    }
+    #mail{
+        font-size: 15px;
+    }
+    #loc{
+        font-size: 15px;
+    }
+    .phone{
+        margin-top: 0px;
+    }
+
+}   
+    
+/* SKILLSET-TAB */
+@media (min-width:1400px) and (max-width:1439px){
+   
+    .skill-tab{
+        display: flex;
+    }
+    .skill-content{
+        margin-left: 5%;
+        margin-top: 1rem;
+    }
+    #skill-content{
+        margin-top: 20px;  
+    }
+    .skill-quote{
+        margin-top: 20px;
+        font-size: 25px;
+        width: 1100px;
+        margin-left: -4rem;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-content h1{
+        margin-top: 25px;
+        font-size: 35px;
+    }
+    .tech-names{
+        font-size: 30px;
+    }
+    .technologies{
+        margin-top: 15px;
+    }
+    .skill-tab-img img{
+        width: 450px;
+        height: 480px;
+        margin-top: 16%;
+        margin-left: 20%;  
+    }
+}
+/* EDUCATION-TAB */
+
+@media (min-width:1400px) and (max-width:1439px){
+    .edu-quote{  
+        margin-left: 5%;
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+    .edu-quote-span{
+        margin-left: 0px;
+    }
+    .edu-container {
+        margin-top: 1rem;
+        margin-left: 8%;
+    } 
+    .card-container {
+        display: flex;
+    } 
+    .ag-courses_item {
+        width: 350px;
+        height: 450px;
+    }
+    .ag-courses-item_link {
+        height: 450px;
+    }
+    .ag-courses-item_bg {
+        height: 130px;
+        width: 130px;
+        top: -60px;
+        right: -60px;
+    }
+    .study{
+        margin-left: 50px;
+    }
+    .college{
+        margin-left: 30px;
+    }
+    .course{
+        margin-left: 80px;
+    }
+    .branch{
+        margin-left: 30px;
+    }
+    #branch{
+        font-size: 20px;
+    }
+    .cse{
+        margin-left: 50px;
+    }
+    .duration {
+        margin-left: 70px;
+        font-size: 20px;
+    }
+    .cgpa{
+        margin-top: 8px;
+        margin-left: 60px;
+    }
+    .nuz{
+        margin-top: 15px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    
+    #inter{
+        margin-left: 50px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 22px;
+    }
+    .puc-span{
+        margin-left: 40px;
+    }
+    #mpc{
+        margin-left: 90px;
+        font-size: 25px;
+        margin-top: -3px;
+    }
+    #ssc{
+        margin-left: 90px;
+        font-size: 25px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 60px;
+        font-size: 23px;
+    } 
+}
+  
+/* CERTIFICATIONS-TAB */
+@media (min-width:1400px) and (max-width:1439px){
+    .cert-container h1{
+        margin-top: 3rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+} 
+/* WORK WITH ME */
+@media (min-width:1400px) and (max-width:1439px){
+    .work-with-me{
+        padding-top: 7rem;  
+    }
+    .work-together{
+        height: 150px;
+    }
+    .hire-me{
+        display: flex;
+    }
+    .hire-me i{
+        font-size: 100px;
+        margin-top: 20px;
+        margin-left: 5% !important;
+    }
+    .hire-me h2{
+        margin-top: 35px;
+        font-size: 30px;
+    }
+    .hire-me h2{
+        margin-left: 15px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .hire-me button{
+        width: 150px;
+        height: 70px;
+        margin-top: 3%;
+        margin-left: 38%;
+    }
+       
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:1400px) and (max-width:1439px){
+    .contact{
+        padding-top: 3rem;
+        height: 700px;  
+    }
+    .contact h2{
+        font-size: 70px;
+    }
+    .get-connect{
+        display: flex;
+        gap: 2%;      
+    }
+    .contact-form{
+        margin-left: 7%; 
+        /* background-color: yellow; */
+    }
+    .input-field{
+        width: 450px;
+        height: 100px;
+    }
+    .connect-btn-span{
+        font-size: 20px;
+    }
+    .shk-hnd{
+        font-size: 100px;
+        margin-left: 5rem;
+        margin-top: 13%;
+    }
+    .contact-footer{
+        margin-left: 5rem;
+        width: 400px;
+        margin-top: 2rem;
+    }  
+    .contact-footer-items{
+        height: 100px;
+    }
+    .contact-footer-info span{
+        font-size: 22.3px;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:1400px) and (max-width:1439px){
+    .footer{
+        display: flex;
+        height: 60px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 60px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 40px;
+    }
+}
+    
+
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Largerer Than 1440px & Smaller Than 1920 px Screens - Large Desktops */
+
+/* HEADER SECTION CODE */
+
+@media (min-width:1440px) and (max-width:1919px) {
+    .header{
+        gap: 12rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 9rem; 
+    }
+    .navbar{
+        gap: 12rem;
+    }  
+    
+}
+    
+/* HOME SECTION CODE */
+@media (min-width:1440px) and (max-width:1919px){
+
+    .home{
+        padding-top: 13rem;
+    }
+    .hero-img img{
+        margin-left: 10rem;
+        height: 500px;
+        width: 500px;
+    }
+    .hero-info-text h3{
+        margin-left: 10rem;
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+    .hero-info-text h1{
+        margin-left: 7.5rem;
+        margin-top: 1rem;
+        font-size: 5rem;    
+    }
+    .color-text{
+        margin-left: 10rem;
+        font-size: 1.8rem;
+    }
+    .cv-btn{
+        margin-left: 10rem;
+        padding: 1rem 2.5rem;
+    }
+    .socials{
+        margin-left: 9rem;
+        gap: 1rem;
+    }  
+    .socials i{
+        font-size: 3.5rem;
+    }
+}
+    
+/* SERVICES SECTION CODE */
+    
+@media (min-width:1440px) and (max-width:1919px){
+    .services{
+        padding-top: 6rem; 
+    }
+    .service-container{
+        height: 200px;
+    }
+    .service-list-items img{
+        height: 200px;
+        width: 200px;
+    }
+    .service-list-container{
+        justify-content: space-around;
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+/* ABOUT SECTION CODE */
+
+@media (min-width:1440px) and (max-width:1919px){
+
+    .about{
+        padding-top: 6rem;
+        height: 790px;
+        /* background-color: yellow; */
+        /* border: 1px solid red; */
+    }
+    
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+    
+    .about-container{ 
+        width: 85%;
+        height: 700px;
+        margin-left: 8%; 
+        /* background-color: yellow; */
+        /* border: 1px solid magenta; */
+
+    }
+    .about-nav-links{
+        height: 80px;
+    }
+    .about-nav-buttons{
+        /* background-color: red; */
+        font-size: 17.2px;
+    }
+    #abt-tab{
+        margin-left: 2px;    
+    }
+    .about-nav-buttons button {
+        width: 24.68%;
+        height: 80px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}  
+/* ABOUT-TAB */
+@media (min-width:1440px) and (max-width:1919px){
+
+    .nav-buttons{
+        /* border: 1px solid magenta; */
+        height: 600px;
+        margin-top: 1px;
+    }
+    .nav-content-tab{
+        display: flex;
+    }
+    .about-tab-img img{
+        width: 450px;
+        height: 470px;
+        margin-left: 0px;
+        margin-top: 4rem;
+    }
+    .content-text-tab h1{
+        margin-left: 10%; 
+        margin-top: 15px;
+        font-size: 35px;
+    }
+    .content-text-tab p{
+        margin-left: 10%;
+        font-size: 18px; 
+        line-height: 1.5;
+        margin-top: -12px;     
+    }   
+    .full-name{
+        margin-left: 10%;
+    }
+    .full-name h3{
+        font-size: 25px;
+    }
+    .full-name h2{
+        font-size: 25px;
+        margin-top: -15px;
+    }
+    .my-details{
+        display: flex;
+        margin-left: 10%;
+        gap: 8rem;
+    }
+    .mail{
+        display: flex;
+        gap: 5px;
+    }
+    #mail{
+        font-size: 15px;
+    }
+    #loc{
+        font-size: 15px;
+    }
+    .phone{
+        margin-top: 0px;
+    }
+}   
+    
+/* SKILLSET-TAB */
+@media (min-width:1440px) and (max-width:1919px){
+   
+    .skill-tab{
+        display: flex;
+    }
+    .skill-content{
+        margin-left: 5%;
+        margin-top: 1rem;
+    }
+    #skill-content{
+        margin-top: 10px;  
+    }
+    .skill-quote{
+        margin-top: 20px;
+        font-size: 25px;
+        width: 1100px;
+        margin-left: -1rem;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-content h1{
+        margin-top: 25px;
+        font-size: 35px;
+    }
+    .tech-names{
+        font-size: 30px;
+    }
+    .technologies{
+        margin-top: 15px;
+    }
+    .skill-tab-img img{
+        width: 450px;
+        height: 480px;
+        margin-top: 16%;
+        margin-left: 20%;  
+    }
+}
+/* EDUCATION-TAB */
+
+@media (min-width:1440px) and (max-width:1919px){
+    .edu-quote{  
+        margin-left: 5%;
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+    .edu-quote-span{
+        margin-left: 0px;
+    }
+    .edu-container {
+        margin-top: 1rem;
+        margin-left: 10%;
+    } 
+    .card-container {
+        display: flex;
+    } 
+    .ag-courses_item {
+        width: 350px;
+        height: 450px;
+    }
+    .ag-courses-item_link {
+        height: 450px;
+    }
+    .ag-courses-item_bg {
+        height: 130px;
+        width: 130px;
+        top: -60px;
+        right: -60px;
+    }
+    .study{
+        margin-left: 50px;
+    }
+    .college{
+        margin-left: 30px;
+    }
+    .course{
+        margin-left: 80px;
+    }
+    .branch{
+        margin-left: 30px;
+    }
+    #branch{
+        font-size: 20px;
+    }
+    .cse{
+        margin-left: 50px;
+    }
+    .duration {
+        margin-left: 70px;
+        font-size: 20px;
+    }
+    .cgpa{
+        margin-top: 8px;
+        margin-left: 60px;
+    }
+    .nuz{
+        margin-top: 15px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    
+    #inter{
+        margin-left: 50px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 22px;
+    }
+    .puc-span{
+        margin-left: 40px;
+    }
+    #mpc{
+        margin-left: 90px;
+        font-size: 25px;
+        margin-top: -3px;
+    }
+    #ssc{
+        margin-left: 90px;
+        font-size: 25px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 60px;
+        font-size: 23px;
+    } 
+}
+  
+/* CERTIFICATIONS-TAB */
+@media (min-width:1440px) and (max-width:1919px){
+    .cert-container h1{
+        margin-top: 3rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+}
+    
+/* WORK WITH ME */
+@media (min-width:1440px) and (max-width:1919px){
+    .work-with-me{
+        padding-top: 7rem;  
+    }
+    .work-together{
+        height: 150px;
+    }
+    .hire-me{
+        display: flex;
+    }
+    .hire-me i{
+        font-size: 100px;
+        margin-top: 20px;
+        margin-left: 5% !important;
+    }
+    .hire-me h2{
+        margin-top: 35px;
+        font-size: 30px;
+    }
+    .hire-me h2{
+        margin-left: 15px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .hire-me button{
+        width: 150px;
+        height: 70px;
+        margin-top: 3%;
+        margin-left: 38%;
+    }
+       
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:1440px) and (max-width:1919px){
+    .contact{
+        padding-top: 3rem;
+        height: 700px;  
+    }
+    .contact h2{
+        font-size: 70px;
+    }
+    .get-connect{
+        display: flex;
+        gap: 2%;      
+    }
+    .contact-form{
+        margin-left: 7%; 
+        /* background-color: yellow; */
+    }
+    .input-field{
+        width: 450px;
+        height: 100px;
+    }
+    .connect-btn-span{
+        font-size: 20px;
+    }
+    .shk-hnd{
+        font-size: 100px;
+        margin-left: 5rem;
+        margin-top: 13%;
+    }
+    .contact-footer{
+        margin-left: 5rem;
+        width: 400px;
+        margin-top: 2rem;
+    }  
+    .contact-footer-items{
+        height: 100px;
+    }
+    .contact-footer-info span{
+        font-size: 22.3px;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:1440px) and (max-width:1919px){
+    .footer{
+        display: flex;
+        height: 60px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 2%;
+        font-size: 2%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 15px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 5px;
+        margin-left: 60px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 40px;
+    }
+}
+    
+
+
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Largerer Than 1920px & Smaller Than 2560 px Screens - Standard Desktops */
+
+/* HEADER SECTION CODE */
+
+@media (min-width:1920px) and (max-width:2559px) {
+    .header{
+        gap: 15rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 10rem; 
+    }
+    .navbar{
+        gap: 17rem;
+    }  
+    
+}
+    
+/* HOME SECTION CODE */
+@media (min-width:1920px) and (max-width:2559px){
+
+    .home{
+        padding-top: 13rem;
+    }
+    .hero-img img{
+        margin-left: 17rem;
+        height: 500px;
+        width: 500px;
+    }
+    .hero-info-text h3{
+        margin-left: 15rem;
+        margin-top: 3rem;
+        font-size: 2rem;
+    }
+    .hero-info-text h1{
+        margin-left: 12rem;
+        margin-top: 1rem;
+        font-size: 5rem;    
+    }
+    .color-text{
+        margin-left: 14rem;
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+    }
+    .cv-btn{
+        margin-left: 15rem;
+        padding: 1rem 2.5rem;
+        margin-top: 2rem;
+    }
+    .socials{
+        margin-left: 12rem;
+        gap: 3rem;
+        margin-top: 2rem;
+    }  
+    .socials i{
+        font-size: 3.5rem;
+    }
+}
+    
+/* SERVICES SECTION CODE */
+    
+@media (min-width:1920px) and (max-width:2559px){
+    .services{
+        padding-top: 6rem; 
+    }
+    .service-container{
+        height: 250px;
+    }
+    .service-list-items img{
+        height: 250px;
+        width: 250px;
+    }
+    .service-list-container{
+        justify-content: space-around;
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+/* ABOUT SECTION CODE */
+
+@media (min-width:1920px) and (max-width:2559px){
+
+    .about{
+        padding-top: 6rem;
+        height: 790px;
+        /* background-color: yellow; */
+        /* border: 1px solid red; */
+    }
+    
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+    
+    .about-container{ 
+        width: 85%;
+        height: 700px;
+        margin-left: 8%; 
+        /* background-color: yellow; */
+        /* border: 1px solid magenta; */
+    }
+    .about-nav-links{
+        height: 80px;
+    }
+    .about-nav-buttons{
+        /* background-color: red; */
+        font-size: 17.2px;
+    }
+    #abt-tab{
+        margin-left: 2px;    
+    }
+    .about-nav-buttons button {
+        width: 24.68%;
+        height: 80px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}  
+/* ABOUT-TAB */
+@media (min-width:1920px) and (max-width:2559px){
+
+    .nav-buttons{
+        /* border: 1px solid magenta; */
+        height: 600px;
+        margin-top: 1px;
+    }
+    .nav-content-tab{
+        display: flex;
+    }
+    .about-tab-img img{
+        width: 450px;
+        height: 470px;
+        margin-left: 0px;
+        margin-top: 4rem;
+    }
+    .content-text-tab h1{
+        margin-left: 10%; 
+        margin-top: 15px;
+        font-size: 40px;
+    }
+    .content-text-tab p{
+        margin-left: 10%;
+        font-size: 21px; 
+        line-height: 1.4;
+        margin-top: -12px;     
+    }   
+    .full-name{
+        margin-left: 10%;
+    }
+    .full-name h3{
+        font-size: 25px;
+    }
+    .full-name h2{
+        font-size: 30px;
+        margin-top: -15px;
+    }
+    .my-details{
+        display: flex;
+        margin-left: 10%;
+        gap: 8rem;
+    }
+    .mail{
+        display: flex;
+        gap: 5px;
+    }
+    .mail img{
+        width: 30px;
+    }
+    #mail{
+        font-size: 25px;
+    }
+    #loc{
+        font-size: 25px;
+    }
+    #loc-icon{
+        font-size: 30px;
+    }
+    .phone{
+        margin-top: 0px;
+        gap: 20px;
+    }
+    .phone img{
+        width: 30px;
+    }
+    #phn{
+        font-size: 25px;
+    }
+    .social-media{
+        gap: 3.5rem;
+    }
+    #git{
+        font-size: 50px;
+    }
+    .social-media img{
+        width: 50px;
+    }
+}   
+    
+/* SKILLSET-TAB */
+@media (min-width:1920px) and (max-width:2559px){
+   
+    .skill-tab{
+        display: flex;
+    }
+    .skill-content{
+        margin-left: 13%;
+        margin-top: 1rem;
+    }
+    #skill-content{
+        margin-top: 0px;  
+    }
+    .skill-quote{
+        margin-top: 20px;
+        font-size: 25px;
+        width: 1100px;
+        margin-left: 3rem;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-content h1{
+        margin-top: 25px;
+        font-size: 35px;
+        margin-left: 3rem;
+    }
+    .tech-names{
+        font-size: 35px;
+    }
+    .technologies{
+        margin-top: 15px;
+    }
+    .skill-tab-img img{
+        width: 450px;
+        height: 480px;
+        margin-top: 16%;
+        margin-left: 20%;  
+    }
+}
+/* EDUCATION-TAB */
+
+@media (min-width:1920px) and (max-width:2559px){
+    .edu-quote{  
+        margin-left: 15%;
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+    .edu-quote-span{
+        margin-left: 0px;
+    }
+    .edu-container {
+        margin-top: 2rem;
+        margin-left: 20%;
+    } 
+    .card-container {
+        display: flex;
+    } 
+    .ag-courses_item {
+        width: 350px;
+        height: 450px;
+    }
+    .ag-courses-item_link {
+        height: 450px;
+    }
+    .ag-courses-item_bg {
+        height: 130px;
+        width: 130px;
+        top: -60px;
+        right: -60px;
+    }
+    .study{
+        margin-left: 50px;
+    }
+    .college{
+        margin-left: 30px;
+    }
+    .course{
+        margin-left: 80px;
+    }
+    .branch{
+        margin-left: 30px;
+    }
+    #branch{
+        font-size: 20px;
+    }
+    .cse{
+        margin-left: 50px;
+    }
+    .duration {
+        margin-left: 70px;
+        font-size: 20px;
+    }
+    .cgpa{
+        margin-top: 8px;
+        margin-left: 60px;
+    }
+    .nuz{
+        margin-top: 15px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    #inter{
+        margin-left: 50px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 22px;
+    }
+    .puc-span{
+        margin-left: 40px;
+    }
+    #mpc{
+        margin-left: 90px;
+        font-size: 25px;
+        margin-top: -3px;
+    }
+    #ssc{
+        margin-left: 90px;
+        font-size: 25px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 60px;
+        font-size: 23px;
+    } 
+}
+  
+/* CERTIFICATIONS-TAB */
+@media (min-width:1920px) and (max-width:2559px){
+    .cert-container h1{
+        margin-top: 4rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+}  
+/* WORK WITH ME */
+@media (min-width:1920px) and (max-width:2559px){
+    .work-with-me{
+        padding-top: 7rem;  
+    }
+    .work-together{
+        height: 150px;
+    }
+    .hire-me{
+        display: flex;
+    }
+    .hire-me i{
+        font-size: 100px;
+        margin-top: 20px;
+        margin-left: 7% !important;
+    }
+    .hire-me h2{
+        margin-top: 35px;
+        font-size: 30px;
+    }
+    .hire-me h2{
+        margin-left: 15px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .hire-me button{
+        width: 150px;
+        height: 70px;
+        margin-top: 2%;
+        margin-left: 38%;
+    }
+       
+}
+/* CONTACT SECTION CODE */
+    
+@media (min-width:1920px) and (max-width:2559px){
+    .contact{
+        padding-top: 3rem;
+        height: 750px;  
+    }
+    .contact h2{
+        font-size: 80px;
+    }
+    .get-connect{
+        display: flex;
+        gap: 2%;      
+    }
+    .contact-form{
+        margin-left: 7%; 
+        /* background-color: yellow; */
+    }
+    .input-field{
+        width: 450px;
+        height: 100px;
+    }
+    .connect-btn-span{
+        font-size: 20px;
+    }
+    .shk-hnd{
+        font-size: 100px;
+        margin-left: 15rem;
+        margin-top: 10%;
+    }
+    .contact-footer{
+        margin-left: 15rem;
+        width: 400px;
+        margin-top: 2rem;
+    }  
+    .contact-footer-items{
+        height: 100px;
+    }
+    .contact-footer-info span{
+        font-size: 22.3px;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media (min-width:1920px) and (max-width:2559px){
+    .footer{
+        display: flex;
+        height: 80px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 1.5%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 20px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 15px;
+        margin-left: 60px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 40px;
+    }
+}
+    
+
+
+
+
+/* MEDIA QUERIES */
+
+
+
+/* Responsive For Largerer Than 2560px Screens - 4K Screens */
+
+/* HEADER SECTION CODE */
+
+@media(min-width:2560px) {
+    .header{
+        gap: 25rem;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 13rem; 
+    }
+    .navbar{
+        gap: 20rem;
+    }  
+    
+}
+    
+/* HOME SECTION CODE */
+@media(min-width:2560px){
+
+    .home{
+        padding-top: 13rem;
+    }
+    .hero-img img{
+        margin-left: 20rem;
+        height: 600px;
+        width: 600px;
+    }
+    .hero-info-text h3{
+        margin-left: 15rem;
+        margin-top: 5rem;
+        font-size: 2rem;
+    }
+    .hero-info-text h1{
+        margin-left: 12rem;
+        margin-top: 1rem;
+        font-size: 5rem;    
+    }
+    .color-text{
+        margin-left: 14rem;
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+    }
+    .cv-btn{
+        margin-left: 15rem;
+        padding: 1rem 2.5rem;
+        margin-top: 2rem;
+    }
+    .socials{
+        margin-left: 12rem;
+        gap: 3rem;
+        margin-top: 2rem;
+    }  
+    .socials i{
+        font-size: 3.5rem;
+    }
+}
+    
+/* SERVICES SECTION CODE */
+    
+@media(min-width:2560px){
+    .services{
+        padding-top: 6rem; 
+    }
+    .service-container{
+        height: 300px;
+    }
+    .service-list-items img{
+        height: 300px;
+        width: 300px;
+    }
+    .service-list-container{
+        justify-content: space-around;
+    }
+    .list-item-text h2{
+        font-size: 15px;
+    }
+    #wdv-text{
+        padding-left:30px;
+    }
+}
+    
+/* ABOUT SECTION CODE */
+
+@media(min-width:2560px){
+
+    .about{
+        padding-top: 6rem;
+        height: 790px;
+        /* background-color: yellow; */
+        /* border: 1px solid red; */
+    }
+    
+    /* ABOUT,SKILLS,EDU,CERT-TAB-NAVBAR */
+    
+    .about-container{ 
+        width: 85%;
+        height: 700px;
+        margin-left: 8%; 
+        /* background-color: yellow; */
+        /* border: 1px solid magenta; */
+    }
+    .about-nav-links{
+        height: 80px;
+    }
+    .about-nav-buttons{
+        /* background-color: red; */
+        font-size: 17.2px;
+    }
+    #abt-tab{
+        margin-left: 8px;    
+    }
+    .about-nav-buttons button {
+        width: 24.68%;
+        height: 80px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}  
+/* ABOUT-TAB */
+@media(min-width:2560px){
+
+    .nav-buttons{
+        /* border: 1px solid magenta; */
+        height: 600px;
+        margin-top: 1px;
+    }
+    .nav-content-tab{
+        display: flex;
+    }
+    .about-tab-img img{
+        width: 450px;
+        height: 470px;
+        margin-left: 7rem;
+        margin-top: 4rem;
+    }
+    .content-text-tab h1{
+        margin-left: 10%; 
+        margin-top: 15px;
+        font-size: 40px;
+    }
+    .content-text-tab p{
+        margin-left: 10%;
+        font-size: 21px; 
+        line-height: 1.5;
+        margin-top: -12px;     
+    }   
+    .full-name{
+        margin-left: 10%;
+    }
+    .full-name h3{
+        font-size: 25px;
+    }
+    .full-name h2{
+        font-size: 30px;
+        margin-top: 15px;
+    }
+    .my-details{
+        display: flex;
+        margin-left: 10%;
+        gap: 8rem;
+    }
+    .mail{
+        display: flex;
+        gap: 5px;
+    }
+    .mail img{
+        width: 30px;
+    }
+    #mail{
+        font-size: 25px;
+    }
+    #loc{
+        font-size: 25px;
+    }
+    #loc-icon{
+        font-size: 30px;
+    }
+    .phone{
+        margin-top: 0px;
+        gap: 20px;
+    }
+    .phone img{
+        width: 30px;
+    }
+    #phn{
+        font-size: 25px;
+    }
+    .social-media{
+        gap: 3.5rem;
+    }
+    #git{
+        font-size: 50px;
+    }
+    .social-media img{
+        width: 50px;
+    }
+}   
+    
+/* SKILLSET-TAB */
+@media(min-width:2560px){
+   
+    .skill-tab{
+        display: flex;
+    }
+    .skill-content{
+        margin-left: 13%;
+        margin-top: 1rem;
+    }
+    #skill-content{
+        margin-top: 0px;  
+    }
+    .skill-quote{
+        margin-top: 20px;
+        font-size: 25px;
+        width: 1100px;
+        margin-left: 3rem;
+    }
+    .skill-quote-span{
+        margin-left: 0%;
+    }
+    .skill-content h1{
+        margin-top: 25px;
+        font-size: 35px;
+        margin-left: 3rem;
+    }
+    .tech-names{
+        font-size: 35px;
+    }
+    .technologies{
+        margin-top: 15px;
+    }
+    .skill-tab-img img{
+        width: 450px;
+        height: 480px;
+        margin-top: 16%;
+        margin-left: 20%;  
+    }
+}
+/* EDUCATION-TAB */
+
+@media(min-width:2560px){
+    .edu-quote{  
+        margin-left: 15%;
+        font-size: 30px;
+        margin-top: 1rem;
+    }
+    .edu-quote-span{
+        margin-left: 0px;
+    }
+    .edu-container {
+        margin-top: 2rem;
+        margin-left: 20%;
+    } 
+    .card-container {
+        display: flex;
+    } 
+    .ag-courses_item {
+        width: 350px;
+        height: 450px;
+    }
+    .ag-courses-item_link {
+        height: 450px;
+    }
+    .ag-courses-item_bg {
+        height: 130px;
+        width: 130px;
+        top: -60px;
+        right: -60px;
+    }
+    .study{
+        margin-left: 50px;
+    }
+    .college{
+        margin-left: 30px;
+    }
+    .course{
+        margin-left: 80px;
+    }
+    .branch{
+        margin-left: 30px;
+    }
+    #branch{
+        font-size: 20px;
+    }
+    .cse{
+        margin-left: 50px;
+    }
+    .duration {
+        margin-left: 70px;
+        font-size: 20px;
+    }
+    .cgpa{
+        margin-top: 8px;
+        margin-left: 60px;
+    }
+    .nuz{
+        margin-top: 15px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    #inter{
+        margin-left: 50px;
+    }
+    #puc{
+        margin-left: 40px;
+        font-size: 22px;
+    }
+    .puc-span{
+        margin-left: 40px;
+    }
+    #mpc{
+        margin-left: 90px;
+        font-size: 25px;
+        margin-top: -3px;
+    }
+    #ssc{
+        margin-left: 90px;
+        font-size: 25px;
+    } 
+    .zphs{
+        margin-left: 40px;
+    }
+    #ss{
+        margin-left: 60px;
+        font-size: 23px;
+    } 
+}
+  
+/* CERTIFICATIONS-TAB */
+@media (min-width:2560px){
+    .cert-container h1{
+        margin-top: 4rem;
+        color: red;
+    }
+    .cert-br{
+        display: none;
+    }
+}
+/* WORK WITH ME */
+@media(min-width:2560px){
+    .work-with-me{
+        padding-top: 7rem;  
+    }
+    .work-together{
+        height: 150px;
+    }
+    .hire-me{
+        display: flex;
+    }
+    .hire-me i{
+        font-size: 100px;
+        margin-top: 20px;
+        margin-left: 7% !important;
+    }
+    .hire-me h2{
+        margin-top: 35px;
+        font-size: 30px;
+    }
+    .hire-me h2{
+        margin-left: 15px;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .hire-me button{
+        width: 150px;
+        height: 70px;
+        margin-top: 2%;
+        margin-left: 40%;
+    }
+       
+}
+/* CONTACT SECTION CODE */
+    
+@media(min-width:2560px){
+    .contact{
+        padding-top: 3rem;
+        height: 750px;  
+    }
+    .contact h2{
+        font-size: 80px;
+    }
+    .get-connect{
+        display: flex;
+        gap: 2%;      
+    }
+    .contact-form{
+        margin-left: 7%; 
+        /* background-color: yellow; */
+    }
+    .input-field{
+        width: 450px;
+        height: 100px;
+    }
+    .connect-btn-span{
+        font-size: 20px;
+    }
+    .shk-hnd{
+        font-size: 120px;
+        margin-left: 20rem;
+        margin-top: 7%;
+    }
+    .contact-footer{
+        margin-left: 20rem;
+        width: 400px;
+        margin-top: 2rem;
+    }  
+    .contact-footer-items{
+        height: 100px;
+    }
+    .contact-footer-info span{
+        font-size: 22.3px;
+    }
+}
+    
+/* FOOTER SECTION CODE */
+    
+@media(min-width:2560px){
+    .footer{
+        display: flex;
+        height: 90px;
+        /* background-color: red; */
+    } 
+    .copyright{
+        width: 80%;
+        margin-left: 4%;
+        margin-top: 1.5%;
+        /* background-color: magenta; */
+    }
+    .copyright-text{
+        font-size: 22px;
+    }
+    .back-to-top{
+        width: 10%;
+        margin-top: 15px;
+        margin-left: 60px;
+        /* background-color: yellow; */
+    }
+    .back-to-top i{
+        font-size: 40px;
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
